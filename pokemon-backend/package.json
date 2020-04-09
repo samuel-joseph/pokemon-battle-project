@@ -1,24 +1,17 @@
 {
-  "name": "pokemon_app",
+  "name": "pokemon-backend",
   "version": "1.0.0",
-  "description": "1. Fork and clone this repository 2. `cd` into the repository and run `npm install` to install all the dependencies from the package.json file 3. create the database with `createdb animals_db` 4. run `node resetDb` and `node seed` to set up your model and seed it with basic data  5. open it up in VS with `code .` 6. turn on your server with `npm start`",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "resetDb": "node resetDb.js",
     "seed": "node seed.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arcanlte/quotes-api.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/arcanlte/quotes-api/issues"
-  },
-  "homepage": "https://github.com/arcanlte/quotes-api#readme",
   "dependencies": {
     "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
