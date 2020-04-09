@@ -1,10 +1,10 @@
 const express = require("express");
-
 const PORT = process.env.PORT || 3001;
 
 const userRouter = require("./routes/userRouter.js");
 const pokemonRouter = require("./routes/pokemonRouter");
 const moveRouter = require("./routes/moveRouter.js");
+const defaultRouter = require("./routes/defaultRouter.js");
 
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 // http.listen;
 
 // routes
+app.use("/", defaultRouter);
 app.use("/users", userRouter);
 app.use("/pokemons", pokemonRouter);
 app.use("/pokemons/:pokemonId/moves", moveRouter);
