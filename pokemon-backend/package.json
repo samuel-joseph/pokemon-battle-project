@@ -1,0 +1,34 @@
+{
+  "name": "quotes-api",
+  "version": "1.0.0",
+  "description": "1. Fork and clone this repository 2. `cd` into the repository and run `npm install` to install all the dependencies from the package.json file 3. create the database with `createdb animals_db` 4. run `node resetDb` and `node seed` to set up your model and seed it with basic data  5. open it up in VS with `code .` 6. turn on your server with `npm start`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "resetDb": "node resetDb.js",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcanlte/quotes-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arcanlte/quotes-api/issues"
+  },
+  "homepage": "https://github.com/arcanlte/quotes-api#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose-morgan": "^1.0.12",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2",
+    "sequelize": "^5.21.3"
+  }
+}
