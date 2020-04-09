@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3001",
+  // baseURL: "http://localhost:3001"
+  baseURL: "https://lit-refuge-92327.herokuapp.com/",
 });
 
 export const loginUser = async (loginData) => {

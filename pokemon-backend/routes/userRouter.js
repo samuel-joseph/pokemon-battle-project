@@ -5,7 +5,7 @@ const {
   hashPassword,
   genToken,
   checkPassword,
-  restrict,
+  restrict
 } = require("../services/auth");
 
 const userRouter = Router();
