@@ -163,6 +163,17 @@ class Forest extends Component {
                 ))}
               </div>
             </div>
+            {this.state.isClicked && (
+              <div className="possible">
+                <button className="registerHunt" onClick={() => this.battle()}>
+                  HUNT
+                </button>
+                <p className="woods">
+                  These are your possible pokemons to catch. Scroll up the
+                  pokemons to view!
+                </p>
+              </div>
+            )}
             {this.state.pokemons && (
               <div className="pokemonContainer">
                 {this.state.pokemons.map((data) => (
@@ -170,17 +181,6 @@ class Forest extends Component {
                     <img className="pokemon" src={data.frontImage} />
                   </div>
                 ))}
-              </div>
-            )}
-            {this.state.isClicked && (
-              <div className="possible">
-                <p>
-                  These are your possible pokemons to catch. Scroll up the
-                  pokemons to view!
-                </p>
-                <button className="register" onClick={() => this.battle()}>
-                  HUNT
-                </button>
               </div>
             )}
           </>
