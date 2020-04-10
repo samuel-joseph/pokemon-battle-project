@@ -3,20 +3,20 @@ const { Pokemon, Move, User } = require("./models");
 const main = async () => {
   // Delete everything in the database.
   await Pokemon.destroy({
-    where: {}
+    where: {},
   });
   await Move.destroy({
-    where: {}
+    where: {},
   });
   await User.destroy({
-    where: {}
+    where: {},
   });
 
   const admin = await User.create({
     username: "admin",
     password_digest:
       "$2b$11$J/T6HO7/IHF7TXgu4elqfO.YW6PJIOS9lQdmTQ789Sg7GUPkIer.O",
-    rank: "padawan"
+    rank: "padawan",
   });
 
   const pokemon1 = await Pokemon.create({
@@ -31,7 +31,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon2 = await Pokemon.create({
@@ -46,7 +46,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon3 = await Pokemon.create({
@@ -61,7 +61,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon4 = await Pokemon.create({
@@ -76,7 +76,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon5 = await Pokemon.create({
@@ -91,7 +91,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon6 = await Pokemon.create({
@@ -106,7 +106,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon7 = await Pokemon.create({
@@ -121,7 +121,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon8 = await Pokemon.create({
@@ -136,7 +136,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon9 = await Pokemon.create({
@@ -151,7 +151,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon10 = await Pokemon.create({
@@ -166,7 +166,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon11 = await Pokemon.create({
@@ -181,7 +181,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon12 = await Pokemon.create({
@@ -196,7 +196,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon13 = await Pokemon.create({
@@ -211,7 +211,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon14 = await Pokemon.create({
@@ -226,7 +226,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon15 = await Pokemon.create({
@@ -241,7 +241,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon16 = await Pokemon.create({
@@ -256,7 +256,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon17 = await Pokemon.create({
@@ -271,7 +271,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon18 = await Pokemon.create({
@@ -286,7 +286,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon19 = await Pokemon.create({
@@ -301,7 +301,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon20 = await Pokemon.create({
@@ -316,7 +316,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon21 = await Pokemon.create({
@@ -331,7 +331,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon22 = await Pokemon.create({
@@ -346,7 +346,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon23 = await Pokemon.create({
@@ -361,7 +361,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon24 = await Pokemon.create({
@@ -376,7 +376,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon25 = await Pokemon.create({
@@ -391,7 +391,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon26 = await Pokemon.create({
@@ -406,7 +406,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon27 = await Pokemon.create({
@@ -421,7 +421,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon28 = await Pokemon.create({
@@ -436,7 +436,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon29 = await Pokemon.create({
@@ -451,7 +451,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon30 = await Pokemon.create({
@@ -466,7 +466,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon31 = await Pokemon.create({
@@ -481,7 +481,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon32 = await Pokemon.create({
@@ -496,7 +496,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon33 = await Pokemon.create({
@@ -511,7 +511,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon34 = await Pokemon.create({
@@ -526,7 +526,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon35 = await Pokemon.create({
@@ -541,7 +541,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon36 = await Pokemon.create({
@@ -556,7 +556,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon37 = await Pokemon.create({
@@ -571,7 +571,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon38 = await Pokemon.create({
@@ -586,7 +586,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon39 = await Pokemon.create({
@@ -601,7 +601,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon40 = await Pokemon.create({
@@ -616,7 +616,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon41 = await Pokemon.create({
@@ -631,7 +631,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon42 = await Pokemon.create({
@@ -646,7 +646,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon43 = await Pokemon.create({
@@ -661,7 +661,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon44 = await Pokemon.create({
@@ -676,7 +676,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon45 = await Pokemon.create({
@@ -691,7 +691,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon46 = await Pokemon.create({
@@ -706,7 +706,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Bug"
+    type: "Bug",
   });
 
   const pokemon47 = await Pokemon.create({
@@ -721,7 +721,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Bug"
+    type: "Bug",
   });
 
   const pokemon48 = await Pokemon.create({
@@ -736,7 +736,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Bug"
+    type: "Bug",
   });
 
   const pokemon49 = await Pokemon.create({
@@ -751,7 +751,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Bug"
+    type: "Bug",
   });
 
   const pokemon50 = await Pokemon.create({
@@ -766,7 +766,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon51 = await Pokemon.create({
@@ -781,7 +781,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon52 = await Pokemon.create({
@@ -796,7 +796,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon53 = await Pokemon.create({
@@ -811,7 +811,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon54 = await Pokemon.create({
@@ -826,7 +826,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon55 = await Pokemon.create({
@@ -841,7 +841,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon56 = await Pokemon.create({
@@ -856,7 +856,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon57 = await Pokemon.create({
@@ -871,7 +871,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const pokemon58 = await Pokemon.create({
@@ -886,7 +886,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon59 = await Pokemon.create({
@@ -901,7 +901,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon60 = await Pokemon.create({
@@ -916,7 +916,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon61 = await Pokemon.create({
@@ -931,7 +931,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon62 = await Pokemon.create({
@@ -946,7 +946,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon63 = await Pokemon.create({
@@ -961,7 +961,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon64 = await Pokemon.create({
@@ -976,7 +976,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon65 = await Pokemon.create({
@@ -991,7 +991,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon66 = await Pokemon.create({
@@ -1006,7 +1006,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const pokemon67 = await Pokemon.create({
@@ -1021,7 +1021,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const pokemon68 = await Pokemon.create({
@@ -1036,7 +1036,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const pokemon69 = await Pokemon.create({
@@ -1051,7 +1051,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon70 = await Pokemon.create({
@@ -1066,7 +1066,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon71 = await Pokemon.create({
@@ -1081,7 +1081,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon72 = await Pokemon.create({
@@ -1096,7 +1096,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon73 = await Pokemon.create({
@@ -1111,7 +1111,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon74 = await Pokemon.create({
@@ -1126,7 +1126,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Rock"
+    type: "Rock",
   });
 
   const pokemon75 = await Pokemon.create({
@@ -1141,7 +1141,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Rock"
+    type: "Rock",
   });
 
   const pokemon76 = await Pokemon.create({
@@ -1156,7 +1156,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Rock"
+    type: "Rock",
   });
 
   const pokemon77 = await Pokemon.create({
@@ -1171,7 +1171,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon78 = await Pokemon.create({
@@ -1186,7 +1186,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon79 = await Pokemon.create({
@@ -1201,7 +1201,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon80 = await Pokemon.create({
@@ -1216,7 +1216,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon81 = await Pokemon.create({
@@ -1231,7 +1231,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon82 = await Pokemon.create({
@@ -1246,7 +1246,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon83 = await Pokemon.create({
@@ -1261,7 +1261,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon84 = await Pokemon.create({
@@ -1276,7 +1276,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon85 = await Pokemon.create({
@@ -1291,7 +1291,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon86 = await Pokemon.create({
@@ -1306,7 +1306,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon87 = await Pokemon.create({
@@ -1321,7 +1321,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon88 = await Pokemon.create({
@@ -1336,7 +1336,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon89 = await Pokemon.create({
@@ -1351,7 +1351,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon90 = await Pokemon.create({
@@ -1366,7 +1366,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ice"
+    type: "Ice",
   });
 
   const pokemon91 = await Pokemon.create({
@@ -1381,7 +1381,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ice"
+    type: "Ice",
   });
 
   const pokemon92 = await Pokemon.create({
@@ -1396,7 +1396,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ghost"
+    type: "Ghost",
   });
 
   const pokemon93 = await Pokemon.create({
@@ -1411,7 +1411,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ghost"
+    type: "Ghost",
   });
 
   const pokemon94 = await Pokemon.create({
@@ -1426,7 +1426,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ghost"
+    type: "Ghost",
   });
 
   const pokemon95 = await Pokemon.create({
@@ -1437,11 +1437,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/95.png",
     health: 390,
     current_health: 390,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Rock"
+    type: "Rock",
   });
 
   const pokemon96 = await Pokemon.create({
@@ -1456,7 +1456,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon97 = await Pokemon.create({
@@ -1471,7 +1471,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon98 = await Pokemon.create({
@@ -1486,7 +1486,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon99 = await Pokemon.create({
@@ -1501,7 +1501,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon100 = await Pokemon.create({
@@ -1516,7 +1516,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon101 = await Pokemon.create({
@@ -1531,7 +1531,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon102 = await Pokemon.create({
@@ -1546,7 +1546,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon103 = await Pokemon.create({
@@ -1561,7 +1561,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon104 = await Pokemon.create({
@@ -1576,7 +1576,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon105 = await Pokemon.create({
@@ -1591,7 +1591,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon106 = await Pokemon.create({
@@ -1606,7 +1606,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const pokemon107 = await Pokemon.create({
@@ -1621,7 +1621,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const pokemon108 = await Pokemon.create({
@@ -1636,7 +1636,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon109 = await Pokemon.create({
@@ -1651,7 +1651,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon110 = await Pokemon.create({
@@ -1666,7 +1666,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Poison"
+    type: "Poison",
   });
 
   const pokemon111 = await Pokemon.create({
@@ -1681,7 +1681,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon112 = await Pokemon.create({
@@ -1696,7 +1696,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon113 = await Pokemon.create({
@@ -1707,11 +1707,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/113.png",
     health: 400,
     current_health: 400,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon114 = await Pokemon.create({
@@ -1722,11 +1722,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/114.png",
     health: 350,
     current_health: 350,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Grass"
+    type: "Grass",
   });
 
   const pokemon115 = await Pokemon.create({
@@ -1737,11 +1737,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/115.png",
     health: 390,
     current_health: 390,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon116 = await Pokemon.create({
@@ -1756,7 +1756,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon117 = await Pokemon.create({
@@ -1771,7 +1771,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon118 = await Pokemon.create({
@@ -1786,7 +1786,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon119 = await Pokemon.create({
@@ -1801,7 +1801,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon120 = await Pokemon.create({
@@ -1816,7 +1816,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon121 = await Pokemon.create({
@@ -1831,7 +1831,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon122 = await Pokemon.create({
@@ -1842,11 +1842,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/122.png",
     health: 350,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon123 = await Pokemon.create({
@@ -1857,11 +1857,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/123.png",
     health: 380,
     current_health: 380,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Bug"
+    type: "Bug",
   });
 
   const pokemon124 = await Pokemon.create({
@@ -1872,11 +1872,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/124.png",
     health: 350,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ice"
+    type: "Ice",
   });
 
   const pokemon125 = await Pokemon.create({
@@ -1887,11 +1887,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/125.png",
     health: 370,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon126 = await Pokemon.create({
@@ -1902,11 +1902,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/126.png",
     health: 370,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon127 = await Pokemon.create({
@@ -1917,11 +1917,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/127.png",
     health: 350,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Bug"
+    type: "Bug",
   });
 
   const pokemon128 = await Pokemon.create({
@@ -1932,11 +1932,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/128.png",
     health: 350,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon129 = await Pokemon.create({
@@ -1951,7 +1951,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon130 = await Pokemon.create({
@@ -1966,7 +1966,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon131 = await Pokemon.create({
@@ -1981,7 +1981,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ice"
+    type: "Ice",
   });
 
   const pokemon132 = await Pokemon.create({
@@ -1996,7 +1996,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon133 = await Pokemon.create({
@@ -2011,7 +2011,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon134 = await Pokemon.create({
@@ -2021,12 +2021,12 @@ const main = async () => {
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/134.png",
     health: 350,
-    current_health: 300,
-    level: 1,
+    current_health: 350,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon135 = await Pokemon.create({
@@ -2036,12 +2036,12 @@ const main = async () => {
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/135.png",
     health: 350,
-    current_health: 300,
-    level: 1,
+    current_health: 350,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon136 = await Pokemon.create({
@@ -2051,12 +2051,12 @@ const main = async () => {
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/136.png",
     health: 350,
-    current_health: 300,
-    level: 1,
+    current_health: 350,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon137 = await Pokemon.create({
@@ -2067,11 +2067,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/137.png",
     health: 350,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon138 = await Pokemon.create({
@@ -2086,7 +2086,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon139 = await Pokemon.create({
@@ -2101,7 +2101,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Water"
+    type: "Water",
   });
 
   const pokemon140 = await Pokemon.create({
@@ -2116,7 +2116,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon141 = await Pokemon.create({
@@ -2131,7 +2131,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ground"
+    type: "Ground",
   });
 
   const pokemon142 = await Pokemon.create({
@@ -2142,11 +2142,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/142.png",
     health: 400,
     current_health: 400,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Flying"
+    type: "Flying",
   });
 
   const pokemon143 = await Pokemon.create({
@@ -2157,11 +2157,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/143.png",
     health: 500,
     current_health: 500,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Normal"
+    type: "Normal",
   });
 
   const pokemon144 = await Pokemon.create({
@@ -2172,11 +2172,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png",
     health: 450,
     current_health: 450,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Ice"
+    type: "Ice",
   });
 
   const pokemon145 = await Pokemon.create({
@@ -2191,7 +2191,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Electric"
+    type: "Electric",
   });
 
   const pokemon146 = await Pokemon.create({
@@ -2206,7 +2206,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Fire"
+    type: "Fire",
   });
 
   const pokemon147 = await Pokemon.create({
@@ -2221,7 +2221,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const pokemon148 = await Pokemon.create({
@@ -2236,7 +2236,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const pokemon149 = await Pokemon.create({
@@ -2251,7 +2251,7 @@ const main = async () => {
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const pokemon150 = await Pokemon.create({
@@ -2262,11 +2262,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/150.png",
     health: 500,
     current_health: 500,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const pokemon151 = await Pokemon.create({
@@ -2277,11 +2277,11 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/151.png",
     health: 500,
     current_health: 500,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const tackle = [];
@@ -2308,7 +2308,7 @@ const main = async () => {
       attack: 35,
       animation:
         "https://i.ya-webdesign.com/images/transparent-laser-animated-16.gif",
-      type: "Normal"
+      type: "Normal",
     });
 
     tackle.push(j);
@@ -2319,7 +2319,7 @@ const main = async () => {
       attack: 45,
       animation:
         "https://i.ya-webdesign.com/images/transparent-laser-animated-16.gif",
-      type: "Normal"
+      type: "Normal",
     });
 
     quickAttack.push(s);
@@ -2331,7 +2331,7 @@ const main = async () => {
       attack: 55,
       animation:
         "https://thumbs.gfycat.com/InformalWellwornCockroach-small.gif",
-      type: "Water"
+      type: "Water",
     });
     waterGun.push(o);
   }
@@ -2342,28 +2342,28 @@ const main = async () => {
       attack: 55,
       animation:
         "https://i.pinimg.com/originals/29/ca/76/29ca767e0d917e541cd18eb97f4825dc.gif",
-      type: "Fire"
+      type: "Fire",
     });
 
     const l = await Move.create({
       name: "Flame Thrower",
       attack: 65,
       animation: "https://i.gifer.com/3q62.gif",
-      type: "Fire"
+      type: "Fire",
     });
 
     const m = await Move.create({
       name: "Razor Leaf",
       attack: 65,
       animation:
-        "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif"
+        "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
     });
 
     const n = await Move.create({
       name: "Vine Whip",
       attack: 55,
       animation: "https://i.imgur.com/uDJiGRk.gif",
-      type: "Grass"
+      type: "Grass",
     });
 
     const p = await Move.create({
@@ -2371,7 +2371,7 @@ const main = async () => {
       attack: 65,
       animation:
         "https://webstockreview.net/images/clipart-mountain-ocean-1.gif",
-      type: "Water"
+      type: "Water",
     });
 
     const q = await Move.create({
@@ -2379,21 +2379,21 @@ const main = async () => {
       attack: 55,
       animation:
         "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-      type: "Normal"
+      type: "Normal",
     });
 
     const r = await Move.create({
       name: "Thunder Bolt",
       attack: 65,
       animation: "https://media3.giphy.com/media/ebQMQkzmJNT7G/source.gif",
-      type: "Electric"
+      type: "Electric",
     });
 
     const t = await Move.create({
       name: "Swift",
       attack: 60,
       animation: "https://media.giphy.com/media/SqBY4RuIlJAHTZ2Sp0/giphy.gif",
-      type: "Normal"
+      type: "Normal",
     });
 
     const u = await Move.create({
@@ -2401,7 +2401,7 @@ const main = async () => {
       attack: 60,
       animation:
         "https://i.ya-webdesign.com/images/projectile-sprite-png-15.gif",
-      type: "Psychic"
+      type: "Psychic",
     });
 
     const v = await Move.create({
@@ -2409,35 +2409,35 @@ const main = async () => {
       attack: 55,
       animation:
         "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-      type: "Rock"
+      type: "Rock",
     });
 
     const w = await Move.create({
       name: "Wing Attack",
       attack: 60,
       animation: "https://media2.giphy.com/media/ecwugA7BhePPq/source.gif",
-      type: "Flying"
+      type: "Flying",
     });
 
     const x = await Move.create({
       name: "Toxic",
       attack: 75,
       animation: "https://i.gifer.com/OupZ.gif",
-      type: "Poison"
+      type: "Poison",
     });
 
     const y = await Move.create({
       name: "Acid",
       attack: 55,
       animation: "https://i.gifer.com/OupZ.gif",
-      type: "Poison"
+      type: "Poison",
     });
 
     const z = await Move.create({
       name: "Confusion",
       attack: 55,
       animation: "https://i.gifer.com/OupZ.gif",
-      type: "Psychic"
+      type: "Psychic",
     });
 
     ember.push(k);
@@ -2461,7 +2461,7 @@ const main = async () => {
     attack: 600,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fire"
+    type: "Fire",
   });
 
   const fireBlast = await Move.create({
@@ -2469,7 +2469,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://i.ya-webdesign.com/images/transparent-explosions-animated-gif-4.gif",
-    type: "Fire"
+    type: "Fire",
   });
 
   const fireBlast1 = await Move.create({
@@ -2477,21 +2477,21 @@ const main = async () => {
     attack: 120,
     animation:
       "https://i.ya-webdesign.com/images/transparent-explosions-animated-gif-4.gif",
-    type: "Fire"
+    type: "Fire",
   });
 
   const solarBeam = await Move.create({
     name: "Solar Beam",
     attack: 120,
     animation: "https://thumbs.gfycat.com/ColorlessAcceptableEider-max-1mb.gif",
-    type: "Grass"
+    type: "Grass",
   });
 
   const solarBeam1 = await Move.create({
     name: "Solar Beam",
     attack: 120,
     animation: "https://thumbs.gfycat.com/ColorlessAcceptableEider-max-1mb.gif",
-    type: "Grass"
+    type: "Grass",
   });
 
   const hydroPump = await Move.create({
@@ -2499,7 +2499,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://gifimage.net/wp-content/uploads/2018/10/aura-gif-transparent-6.gif",
-    type: "Water"
+    type: "Water",
   });
 
   const hydroPump1 = await Move.create({
@@ -2507,7 +2507,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://gifimage.net/wp-content/uploads/2018/10/aura-gif-transparent-6.gif",
-    type: "Water"
+    type: "Water",
   });
 
   const seismicToss = await Move.create({
@@ -2515,7 +2515,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const seismicToss1 = await Move.create({
@@ -2523,7 +2523,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const seismicToss2 = await Move.create({
@@ -2531,7 +2531,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const seismicToss3 = await Move.create({
@@ -2539,7 +2539,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const seismicToss4 = await Move.create({
@@ -2547,21 +2547,21 @@ const main = async () => {
     attack: 75,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const thunder = await Move.create({
     name: "Thunder",
     attack: 120,
     animation: "https://media3.giphy.com/media/ebQMQkzmJNT7G/source.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const thunder1 = await Move.create({
     name: "Thunder",
     attack: 120,
     animation: "https://media3.giphy.com/media/ebQMQkzmJNT7G/source.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const skyAttack = await Move.create({
@@ -2569,7 +2569,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://thumbs.gfycat.com/OffbeatEqualAlligatorgar-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const skyAttack1 = await Move.create({
@@ -2577,7 +2577,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://thumbs.gfycat.com/OffbeatEqualAlligatorgar-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const skyAttack2 = await Move.create({
@@ -2585,7 +2585,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://thumbs.gfycat.com/OffbeatEqualAlligatorgar-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const skyAttack3 = await Move.create({
@@ -2593,7 +2593,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://thumbs.gfycat.com/OffbeatEqualAlligatorgar-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const iceBeam1 = await Move.create({
@@ -2601,7 +2601,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://gifimage.net/wp-content/uploads/2017/11/fiocchi-di-neve-gif.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const iceBeam2 = await Move.create({
@@ -2609,7 +2609,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://gifimage.net/wp-content/uploads/2017/11/fiocchi-di-neve-gif.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const iceBeam3 = await Move.create({
@@ -2617,7 +2617,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://gifimage.net/wp-content/uploads/2017/11/fiocchi-di-neve-gif.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const iceBeam4 = await Move.create({
@@ -2625,7 +2625,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://gifimage.net/wp-content/uploads/2017/11/fiocchi-di-neve-gif.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const iceBeam5 = await Move.create({
@@ -2633,7 +2633,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://gifimage.net/wp-content/uploads/2017/11/fiocchi-di-neve-gif.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const blizzard = await Move.create({
@@ -2641,7 +2641,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://gifimage.net/wp-content/uploads/2018/10/aura-gif-transparent-6.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const blizzard1 = await Move.create({
@@ -2649,7 +2649,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://gifimage.net/wp-content/uploads/2018/10/aura-gif-transparent-6.gif",
-    type: "Ice"
+    type: "Ice",
   });
 
   const icePunch = await Move.create({
@@ -2657,7 +2657,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Ice"
+    type: "Ice",
   });
 
   const icePunch1 = await Move.create({
@@ -2665,7 +2665,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Ice"
+    type: "Ice",
   });
 
   const icePunch2 = await Move.create({
@@ -2673,7 +2673,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Ice"
+    type: "Ice",
   });
 
   const icePunch3 = await Move.create({
@@ -2681,7 +2681,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Ice"
+    type: "Ice",
   });
 
   const icePunch4 = await Move.create({
@@ -2689,7 +2689,7 @@ const main = async () => {
     attack: 75,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Ice"
+    type: "Ice",
   });
 
   const thunderPunch = await Move.create({
@@ -2697,7 +2697,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const thunderPunch1 = await Move.create({
@@ -2705,7 +2705,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const thunderPunch2 = await Move.create({
@@ -2713,7 +2713,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const thunderPunch3 = await Move.create({
@@ -2721,7 +2721,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const thunderPunch4 = await Move.create({
@@ -2729,7 +2729,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
-    type: "Electric"
+    type: "Electric",
   });
 
   const highJumpKick = await Move.create({
@@ -2737,7 +2737,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Fighting"
+    type: "Fighting",
   });
 
   const psychic = await Move.create({
@@ -2745,7 +2745,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://pa1.narvii.com/6916/24eaf472b2d3a587aed0c268fcd42f35aedb7061r1-1024-1024_hq.gif",
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const psychic1 = await Move.create({
@@ -2753,7 +2753,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://pa1.narvii.com/6916/24eaf472b2d3a587aed0c268fcd42f35aedb7061r1-1024-1024_hq.gif",
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const psychic2 = await Move.create({
@@ -2761,7 +2761,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://pa1.narvii.com/6916/24eaf472b2d3a587aed0c268fcd42f35aedb7061r1-1024-1024_hq.gif",
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const psychic3 = await Move.create({
@@ -2769,7 +2769,7 @@ const main = async () => {
     attack: 300,
     animation:
       "https://pa1.narvii.com/6916/24eaf472b2d3a587aed0c268fcd42f35aedb7061r1-1024-1024_hq.gif",
-    type: "Psychic"
+    type: "Psychic",
   });
 
   const shadowBall = await Move.create({
@@ -2777,7 +2777,7 @@ const main = async () => {
     attack: 75,
     animation:
       "https://thumbs.gfycat.com/SickEnchantingAdamsstaghornedbeetle-small.gif",
-    type: "Ghost"
+    type: "Ghost",
   });
 
   const shadowBall1 = await Move.create({
@@ -2785,7 +2785,7 @@ const main = async () => {
     attack: 75,
     animation:
       "https://thumbs.gfycat.com/SickEnchantingAdamsstaghornedbeetle-small.gif",
-    type: "Ghost"
+    type: "Ghost",
   });
 
   const slash = await Move.create({
@@ -2793,7 +2793,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const slash1 = await Move.create({
@@ -2801,7 +2801,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const slash2 = await Move.create({
@@ -2809,7 +2809,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const slash4 = await Move.create({
@@ -2817,7 +2817,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const slash3 = await Move.create({
@@ -2825,7 +2825,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const slash6 = await Move.create({
@@ -2833,7 +2833,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const slash7 = await Move.create({
@@ -2841,7 +2841,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
-    type: "Normal"
+    type: "Normal",
   });
 
   const gust = await Move.create({
@@ -2849,7 +2849,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const gust1 = await Move.create({
@@ -2857,7 +2857,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const gust2 = await Move.create({
@@ -2865,7 +2865,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const gust3 = await Move.create({
@@ -2873,7 +2873,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const gust4 = await Move.create({
@@ -2881,21 +2881,21 @@ const main = async () => {
     attack: 50,
     animation:
       "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const peck = await Move.create({
     name: "Peck",
     attack: 35,
     animation: "https://i.imgur.com/C2TBZZE.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const peck1 = await Move.create({
     name: "Peck",
     attack: 35,
     animation: "https://i.imgur.com/C2TBZZE.gif",
-    type: "Flying"
+    type: "Flying",
   });
 
   const earthQuake = await Move.create({
@@ -2903,7 +2903,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const mudSlap1 = await Move.create({
@@ -2911,7 +2911,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
-    type: "Ground"
+    type: "Ground",
   });
 
   const mudSlap2 = await Move.create({
@@ -2919,7 +2919,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
-    type: "Ground"
+    type: "Ground",
   });
 
   const mudSlap3 = await Move.create({
@@ -2927,7 +2927,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
-    type: "Ground"
+    type: "Ground",
   });
 
   const mudSlap4 = await Move.create({
@@ -2935,7 +2935,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
-    type: "Ground"
+    type: "Ground",
   });
 
   const earthQuake1 = await Move.create({
@@ -2943,7 +2943,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const earthQuake2 = await Move.create({
@@ -2951,7 +2951,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const earthQuake3 = await Move.create({
@@ -2959,7 +2959,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const earthQuake4 = await Move.create({
@@ -2967,7 +2967,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const earthQuake5 = await Move.create({
@@ -2975,7 +2975,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const earthQuake6 = await Move.create({
@@ -2983,7 +2983,7 @@ const main = async () => {
     attack: 120,
     animation:
       "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
-    type: "Ground"
+    type: "Ground",
   });
 
   const rockSlide = await Move.create({
@@ -2991,7 +2991,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide1 = await Move.create({
@@ -2999,7 +2999,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide2 = await Move.create({
@@ -3007,7 +3007,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide3 = await Move.create({
@@ -3015,7 +3015,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide4 = await Move.create({
@@ -3023,7 +3023,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide5 = await Move.create({
@@ -3031,7 +3031,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide6 = await Move.create({
@@ -3039,7 +3039,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide7 = await Move.create({
@@ -3047,7 +3047,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const rockSlide8 = await Move.create({
@@ -3055,7 +3055,7 @@ const main = async () => {
     attack: 65,
     animation:
       "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
-    type: "Rock"
+    type: "Rock",
   });
 
   const stoneEdge1 = await Move.create({
@@ -3063,7 +3063,7 @@ const main = async () => {
     attack: 100,
     animation:
       "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
-    type: "Rock"
+    type: "Rock",
   });
 
   const stoneEdge2 = await Move.create({
@@ -3071,7 +3071,7 @@ const main = async () => {
     attack: 100,
     animation:
       "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
-    type: "Rock"
+    type: "Rock",
   });
 
   const stoneEdge3 = await Move.create({
@@ -3079,7 +3079,7 @@ const main = async () => {
     attack: 100,
     animation:
       "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
-    type: "Rock"
+    type: "Rock",
   });
 
   const stoneEdge4 = await Move.create({
@@ -3087,21 +3087,21 @@ const main = async () => {
     attack: 100,
     animation:
       "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
-    type: "Rock"
+    type: "Rock",
   });
 
   const hyperBeam = await Move.create({
     name: "Hyper Beam",
     attack: 150,
     animation: "https://media2.giphy.com/media/dphDDCpGfzJPq/source.gif",
-    type: "Normal"
+    type: "Normal",
   });
 
   const hyperBeam1 = await Move.create({
     name: "Hyper Beam",
     attack: 150,
     animation: "https://media2.giphy.com/media/dphDDCpGfzJPq/source.gif",
-    type: "Normal"
+    type: "Normal",
   });
 
   const dragonRage = await Move.create({
@@ -3109,7 +3109,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-1.gif?w=400",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonRage1 = await Move.create({
@@ -3117,7 +3117,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-1.gif?w=400",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonRage2 = await Move.create({
@@ -3125,7 +3125,7 @@ const main = async () => {
     attack: 55,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-1.gif?w=400",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonClaw = await Move.create({
@@ -3133,7 +3133,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonClaw1 = await Move.create({
@@ -3141,7 +3141,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonClaw2 = await Move.create({
@@ -3149,7 +3149,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonClaw3 = await Move.create({
@@ -3157,7 +3157,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonClaw4 = await Move.create({
@@ -3165,7 +3165,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonClaw5 = await Move.create({
@@ -3173,7 +3173,7 @@ const main = async () => {
     attack: 90,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonRush = await Move.create({
@@ -3181,7 +3181,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-4.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const dragonRush1 = await Move.create({
@@ -3189,7 +3189,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-4.gif",
-    type: "Dragon"
+    type: "Dragon",
   });
 
   const nightShade = await Move.create({
@@ -3197,7 +3197,7 @@ const main = async () => {
     attack: 100,
     animation:
       "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
-    type: "Ghost"
+    type: "Ghost",
   });
 
   await pokemon1.addMove(tackle[0]);
@@ -3759,6 +3759,7 @@ const main = async () => {
 
   await pokemon151.addMove(quickAttack[36]);
   await pokemon151.addMove(takeDown[11]);
+  await pokemon151.addMove(dragonClaw3);
   await pokemon151.addMove(psywave[6]);
   await pokemon151.addMove(psychic3);
 

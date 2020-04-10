@@ -15,7 +15,6 @@ class Forest extends Component {
             "https://i.pinimg.com/originals/2a/a2/0b/2aa20b2129a6b56fd02eb2d794a1a689.png",
           name: "Route 1-35",
           arrayPokemons: [
-            10,
             129,
             13,
             16,
@@ -25,15 +24,12 @@ class Forest extends Component {
             32,
             43,
             46,
-            48,
             60,
             69,
-            10,
-            10,
             129,
-            129
+            129,
           ],
-          rank: "low"
+          rank: "low",
         },
         {
           image:
@@ -58,9 +54,9 @@ class Forest extends Component {
             92,
             90,
             120,
-            147
+            147,
           ],
-          rank: "medium"
+          rank: "medium",
         },
         {
           image:
@@ -86,16 +82,16 @@ class Forest extends Component {
             136,
             140,
             142,
-            143
+            143,
           ],
-          rank: "high"
-        }
+          rank: "high",
+        },
       ],
       pokemons: [],
       chosenPokemon: null,
       isClicked: false,
       proceed: false,
-      rank: null
+      rank: null,
     };
   }
 
@@ -111,7 +107,7 @@ class Forest extends Component {
     this.setState({ pokemons });
   };
 
-  forestPokemons = async data => {
+  forestPokemons = async (data) => {
     console.log(data);
     const id = data.arrayPokemons;
     this.resetMap();
@@ -119,7 +115,7 @@ class Forest extends Component {
       const pokemons = await getPokemon(id[i]);
       this.setState({
         pokemons: [...this.state.pokemons, pokemons],
-        isClicked: true
+        isClicked: true,
       });
     }
     this.setState({ rank: data.rank });
@@ -140,14 +136,14 @@ class Forest extends Component {
         {this.state.proceed ? (
           <Battle
             rank={this.state.rank}
-            saySomething={e => this.props.saySomething(e)}
+            saySomething={(e) => this.props.saySomething(e)}
             pokemonID={this.state.chosenPokemon}
           />
         ) : (
           <>
             <div>
               <div className="forest">
-                {this.state.routeMaps.map(data => (
+                {this.state.routeMaps.map((data) => (
                   <div className=".grass">
                     <img
                       className="grassImg"
@@ -161,7 +157,7 @@ class Forest extends Component {
             </div>
             {this.state.pokemons && (
               <div className="pokemonContainer">
-                {this.state.pokemons.map(data => (
+                {this.state.pokemons.map((data) => (
                   <div>
                     <img className="pokemon" src={data.frontImage} />
                   </div>
