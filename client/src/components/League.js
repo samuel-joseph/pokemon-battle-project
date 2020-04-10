@@ -201,6 +201,7 @@ class League extends Component {
         champion: { ...this.state.champion, id: idChamp, name, pokemon },
       });
     }
+    
   };
 
   newNpc = async (enemy) => {
@@ -509,7 +510,10 @@ class League extends Component {
             this.props.saySomething(
               "YOU LOST... Go head to Pokecenter and heal those poor pokemons then try again"
             );
-            this.setState({ battle: true });
+            this.setState({
+              battle: true,
+              userPokemon: { ...this.state.userPokemon, current_health: 0 },
+            });
           }.bind(this),
           3000
         );
@@ -619,8 +623,12 @@ class League extends Component {
       <div className="league">
         {!this.state.isStart && (
           <div>
-            <h4>GYM LEADER</h4>
-            <div className="gym">
+            <h4>{this.state.gymLeader[0].name}</h4>
+            <img className="leader" src={this.state.gymLeader[0].image} />
+            {this.state.gymLeader[0].pokemon.map((data) => (
+              <img src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png" />
+            ))}
+            {/* <div className="gym">
               {this.state.gymLeader &&
                 this.state.gymLeader.map((data) => (
                   <img className="leader" src={data.image} />
@@ -633,7 +641,7 @@ class League extends Component {
                 this.state.eliteFour.map((data) => (
                   <img className="four" src={data.image} />
                 ))}
-            </div>
+            </div> */}
             <button className="register" onClick={() => this.battleStart()}>
               START
             </button>
