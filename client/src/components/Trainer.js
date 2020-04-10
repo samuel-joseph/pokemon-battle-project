@@ -5,7 +5,7 @@ import {
   trainerPokemon,
   getMoves,
   remove,
-  removeMove
+  removeMove,
 } from "../services/api_helper";
 
 class Trainer extends Component {
@@ -24,8 +24,8 @@ class Trainer extends Component {
         health: null,
         current_experience: null,
         total_experience: null,
-        type: null
-      }
+        type: null,
+      },
     };
   }
 
@@ -46,19 +46,19 @@ class Trainer extends Component {
         health: pokemon[0].health,
         current_experience: pokemon[0].current_experience,
         total_experience: pokemon[0].total_experience,
-        type: pokemon[0].type
+        type: pokemon[0].type,
       };
       this.setState({ pokemon, showPokemon, moves });
     }
   };
-  isFree = async regards => {
+  isFree = async (regards) => {
     this.props.saySomething(`Say goodbye to ${regards.name}`);
     const resp = await remove(regards.id);
     const pokemon = await trainerPokemon();
     this.setState({ pokemon });
   };
 
-  showMoves = async pokemon => {
+  showMoves = async (pokemon) => {
     this.props.saySomething(
       `This is your ${pokemon.name}, you can free your pokemon by pressing FREE button at the buttom.`
     );
@@ -88,8 +88,8 @@ class Trainer extends Component {
         total_experience,
         health,
         current_health,
-        type
-      }
+        type,
+      },
     });
   };
 
@@ -106,11 +106,13 @@ class Trainer extends Component {
   render() {
     return (
       <div className="typeA">
-        <h1>TRAINER {localStorage.getItem("name")}</h1>
+        <div className="trainerName">
+          <h1>TRAINER {localStorage.getItem("name")}</h1>
+        </div>
         {this.state.pokemon && (
           <div className="trainer">
             <div className="trainerA">
-              {this.state.pokemon.map(data => (
+              {this.state.pokemon.map((data) => (
                 <div>
                   <img
                     className="trainerPokemon"
@@ -124,10 +126,10 @@ class Trainer extends Component {
               {this.state.showPokemon && (
                 <div className="specificPokemonA">
                   <div className="specificPokemonB">
-                    <span>
+                    <div className="levelName">
                       <h4>{this.state.showPokemon.name}</h4>
-                      Level {this.state.showPokemon.level}
-                    </span>
+                      <p>Level {this.state.showPokemon.level}</p>
+                    </div>
                     <img
                       className="specificPokemon"
                       src={this.state.showPokemon.frontImage}
@@ -156,7 +158,7 @@ class Trainer extends Component {
                           {data.name}:{data.attack}
                         </div>
                         {this.state.moves.length > 4 && (
-                          <button onClick={e => this.delete(index, data)}>
+                          <button onClick={(e) => this.delete(index, data)}>
                             DEL
                           </button>
                         )}

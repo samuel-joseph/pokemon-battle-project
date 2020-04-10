@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "http://localhost:3001",
-  baseURL: "https://cryptic-thicket-32570.herokuapp.com/",
+  baseURL: "http://localhost:3001",
+  // baseURL: "https://mysterious-chamber-56831.herokuapp.com/",
 });
 
 export const loginUser = async (loginData) => {

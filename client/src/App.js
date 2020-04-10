@@ -6,7 +6,7 @@ import {
   getAllPokemon,
   userData,
   verifyUser,
-  registerUser
+  registerUser,
 } from "./services/api_helper";
 import { Link, Route, withRouter } from "react-router-dom";
 
@@ -32,11 +32,11 @@ class App extends Component {
       currentUser: null,
       formData: {
         username: null,
-        password: null
+        password: null,
       },
       pokemons: null,
       isClicked: false,
-      instruction: null
+      instruction: null,
     };
   }
 
@@ -50,7 +50,7 @@ class App extends Component {
       user &&
         this.setState({
           currentUser: user,
-          id
+          id,
         });
     }
   };
@@ -77,7 +77,7 @@ class App extends Component {
     console.log(currentUser);
     this.setState({
       currentUser,
-      trainername: currentUser.username
+      trainername: currentUser.username,
     });
 
     this.props.history.push("/start");
@@ -94,7 +94,7 @@ class App extends Component {
 
   handleLogout = () => {
     this.setState({
-      currentUser: null
+      currentUser: null,
     });
     localStorage.removeItem("authToken");
     localStorage.removeItem("name");
@@ -111,7 +111,7 @@ class App extends Component {
     this.setState({ isClicked: true });
   };
 
-  saySomething = instruction => {
+  saySomething = (instruction) => {
     this.setState({ instruction });
   };
 
@@ -121,7 +121,7 @@ class App extends Component {
         <div>
           {!this.state.currentUser && (
             <div className="opening">
-              <h2>POKEMON LEAGUE</h2>
+              <h2 className="title">POKEMON LEAGUE</h2>
               <div className="buttonsOpenning">
                 <Link className="register" to="/users/register">
                   REGISTER
@@ -170,24 +170,24 @@ class App extends Component {
         <div className="main">
           <Route
             path="/league"
-            render={() => <League saySomething={e => this.saySomething(e)} />}
+            render={() => <League saySomething={(e) => this.saySomething(e)} />}
           />
           <Route
             path="/forest"
-            render={() => <Forest saySomething={e => this.saySomething(e)} />}
+            render={() => <Forest saySomething={(e) => this.saySomething(e)} />}
           />
           <Route
             path="/start"
             render={() => (
               <StartGame
-                saySomething={e => this.saySomething(e)}
+                saySomething={(e) => this.saySomething(e)}
                 instruction={this.state.instruction}
               />
             )}
           />
           <Route
             path="/menu"
-            render={() => <Menu saySomething={e => this.saySomething(e)} />}
+            render={() => <Menu saySomething={(e) => this.saySomething(e)} />}
           />
           <Route path="/pokemons/pokedex" render={() => <Pokedex />} />
           <Route
@@ -195,7 +195,7 @@ class App extends Component {
             render={() => (
               <Trainer
                 trainername={this.state.trainername}
-                saySomething={e => this.saySomething(e)}
+                saySomething={(e) => this.saySomething(e)}
               />
             )}
           />

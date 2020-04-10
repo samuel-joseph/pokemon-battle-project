@@ -4,7 +4,7 @@ import {
   getPokemon,
   storePokemon,
   getMoves,
-  addMoves
+  addMoves,
 } from "../services/api_helper";
 
 class ChooseStarter extends Component {
@@ -23,13 +23,13 @@ class ChooseStarter extends Component {
         name: null,
         attack: null,
         animation: null,
-        type: null
+        type: null,
       },
       moveData2: {
         name: null,
         attack: null,
         animation: null,
-        type: null
+        type: null,
       },
       formData: {
         name: null,
@@ -41,9 +41,9 @@ class ChooseStarter extends Component {
         total_experience: 300,
         current_experience: 0,
         fullyEvolved: null,
-        type: null
+        type: null,
       },
-      isClicked: false
+      isClicked: false,
     };
   }
 
@@ -65,12 +65,10 @@ class ChooseStarter extends Component {
   };
 
   chosenPokemon = (pokemon, moves) => {
-    console.log(pokemon);
-    console.log(moves);
     const chosenPokemonId = pokemon.id;
     const starterMoves = [];
 
-    this.props.saySomething(" ");
+    this.props.saySomething(`${pokemon.name} a ${pokemon.type} pokemon!`);
 
     this.setState({
       moveData1: {
@@ -78,8 +76,8 @@ class ChooseStarter extends Component {
         name: moves[0].name,
         attack: moves[0].attack,
         animation: moves[0].animation,
-        type: moves[0].type
-      }
+        type: moves[0].type,
+      },
     });
     this.setState({
       moveData2: {
@@ -87,8 +85,8 @@ class ChooseStarter extends Component {
         name: moves[1].name,
         attack: moves[1].attack,
         animation: moves[1].animation,
-        type: moves[1].type
-      }
+        type: moves[1].type,
+      },
     });
     this.setState({
       formData: {
@@ -99,33 +97,33 @@ class ChooseStarter extends Component {
         health: pokemon.health,
         current_health: pokemon.current_health,
         fullyEvolved: pokemon.fullyEvolved,
-        type: pokemon.type
-      }
+        type: pokemon.type,
+      },
     });
     this.passMoves(moves);
 
     this.setState({
       isClicked: true,
-      chosenPokemonId
+      chosenPokemonId,
     });
   };
 
-  passMoves = moves => {
+  passMoves = (moves) => {
     this.setState({
       moveData1: {
         ...this.state.moveData1,
         name: moves[0].name,
         attack: moves[0].attack,
         animation: moves[0].animation,
-        type: moves[0].type
+        type: moves[0].type,
       },
       moveData2: {
         ...this.state.moveData2,
         name: moves[1].name,
         attack: moves[1].attack,
         animation: moves[1].animation,
-        type: moves[1].type
-      }
+        type: moves[1].type,
+      },
     });
   };
 
@@ -146,7 +144,7 @@ class ChooseStarter extends Component {
             {this.state.isClicked && (
               <div className="choose">
                 <img className="pokemon" src={this.state.formData.frontImage} />
-                <p>{this.state.formData.name}</p>
+                <p className="name">{this.state.formData.name}</p>
               </div>
             )}
             <div className="setPokeball">

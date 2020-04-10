@@ -71,9 +71,20 @@ img {
 }
 
 p {
-  font-weight: bold;
   padding: 2% 2%;
   overflow: scroll;
+}
+
+.name {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.choose {
+  background-color: white;
+  border-top-style: solid;
 }
 
 .footer {
@@ -81,7 +92,7 @@ p {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 15%;
+  height: 10%;
   background-color: whitesmoke;
   color: black;
   text-align: center;
@@ -137,7 +148,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  background-image: linear-gradient(-180deg, blue, black, red);
+  background-color: black;
 }
 
 .trainerPokemon {
@@ -151,6 +162,13 @@ h4 {
   width: 50%;
 }
 
+.levelName {
+  padding-top: 20px;
+  color: black;
+  font-weight: bolder;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
 .moveContainer {
   display: flex;
   flex-direction: column;
@@ -160,14 +178,33 @@ h4 {
   width: 150%;
   overflow: scroll;
   border: 5px solid red;
-  background-color: white;
+  background-color: gray;
   color: black;
+  border-radius: 20px;
+}
+
+.pokemonDetails {
+  border-style: solid;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.trainerName {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.7);
+  margin-bottom: 10px;
+  margin-top: -25px;
 }
 
 .movesets {
   margin-top: 20px;
   padding-bottom: 20px;
   color: black;
+  border-style: solid;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .specificPokemon {
@@ -182,7 +219,7 @@ h4 {
 }
 .main {
   background-image: linear-gradient(-180deg, green, black);
-  height: 70vh;
+  height: 75vh;
   margin-top: 15vh;
   overflow: scroll;
 }
@@ -227,6 +264,13 @@ h4 {
   overflow: scroll;
   height: 60vh;
   width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.possible {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5% 5%;
 }
 
 .grassImg {
@@ -263,6 +307,9 @@ h4 {
 .npcB {
   display: flex;
   flex-direction: column;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  color: white;
+  font-weight: bold;
 }
 
 .npcPokemon {
@@ -295,7 +342,7 @@ h4 {
 
 .imagePoke1 {
   margin-bottom: 10px;
-  width: 25%;
+  width: 15%;
 }
 
 .healPoke {
@@ -339,13 +386,13 @@ h4 {
   animation-iteration-count: infinite;
 }
 
-.userPokemonFade {
+/* .userPokemonFade {
   width: 50vw;
   animation-name: fade;
   animation-duration: 1.5s;
   animation-delay: initial;
   animation-iteration-count: infinite;
-}
+} */
 
 .userPokemonFade {
   width: 50vw;
@@ -359,6 +406,9 @@ h4 {
 .userB {
   display: flex;
   flex-direction: column;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  color: white;
+  font-weight: bold;
 }
 
 .userFX {
