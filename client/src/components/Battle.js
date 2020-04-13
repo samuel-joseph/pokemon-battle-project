@@ -202,7 +202,6 @@ class Battle extends Component {
       useAdvantage(this.state.npcAttack, typeUser)
     );
 
-    console.log(this.state.npcAttack);
     let npcAdvantage = typeAdvantage(
       randomNpcAttack.type,
       this.state.fighterPokemon.type
@@ -223,14 +222,13 @@ class Battle extends Component {
       randomUserAttack.type,
       this.state.npc.type
     );
-    console.log(userAdvantage);
 
     let userAttack = Math.floor(
       (randomUserAttack.attack + randomUserAttack.attack * levelUser * 0.01) *
         userAdvantage
     );
     let userAnimation = randomUserAttack.animation;
-    console.log(randomUserAttack.name);
+    console.log(this.state.userPokemonAttacks);
 
     let effective = "";
     if (userAdvantage === 2) effective = "SUPER EFFECTIVE";
@@ -389,7 +387,9 @@ class Battle extends Component {
     const hp = this.state.npc.current_health;
     const totalHp = this.state.fighterPokemon.health;
     const chance = totalHp * 0.07;
-    const dice = Math.floor(Math.random() * Math.floor(hp));
+    const dice = totalHp * 0.07;
+    console.log(totalHp * 0.07);
+    // Math.floor(Math.random() * Math.floor(hp));
     this.props.saySomething(
       `Trainer ${localStorage.getItem("name")} throws a pokeball!`
     );
@@ -476,7 +476,6 @@ class Battle extends Component {
               <>
                 {this.state.userPokemon && (
                   <div>
-                    {console.log(this.state.count)}
                     <div className="forestBat">
                       <div className="npc">
                         <div>

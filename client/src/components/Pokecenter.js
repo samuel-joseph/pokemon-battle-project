@@ -4,7 +4,7 @@ import {
   update,
   trainerPokemon,
   ownedPokemon,
-  getPokemon
+  getPokemon,
 } from "../services/api_helper";
 
 class Pokecenter extends Component {
@@ -15,9 +15,9 @@ class Pokecenter extends Component {
       user: null,
       pokemon: [],
       formData: {
-        current_health: null
+        current_health: null,
       },
-      isClicked: false
+      isClicked: false,
     };
   }
 
@@ -33,14 +33,14 @@ class Pokecenter extends Component {
       let id = user[i].id;
       let fullHp = user[i].health;
       let passData = {
-        current_health: fullHp
+        current_health: fullHp,
       };
       const regainHp = await update(id, passData);
     }
     this.setState({ isClicked: true });
   };
 
-  show = async id => {
+  show = async (id) => {
     const pokemon = [];
     const resp = await getPokemon(id);
     pokemon.push(resp);
@@ -54,21 +54,11 @@ class Pokecenter extends Component {
         {this.state.user && (
           <div className="pokecenter0">
             {this.state.isClicked ? (
-              this.state.user.map(data => (
+              this.state.user.map((data) => (
                 <img className="pokeAtCenter" src={data.frontImage} />
               ))
             ) : (
-              <div className="pokecenter">
-                {this.state.user.map(data => (
-                  <div className="pokecenter1">
-                    <img
-                      className="healPoke"
-                      onClick={() => this.show(data.id)}
-                      src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png"
-                    />
-                  </div>
-                ))}
-              </div>
+              <div className="pokecenter"></div>
             )}
           </div>
         )}

@@ -41,11 +41,23 @@ class League extends Component {
       isStart: false,
       isChamp: false,
       battle: false,
+      currentTip: null,
       rip:
         "https://b7.pngbarn.com/png/250/103/headstone-grave-cemetery-rest-in-peace-grave-s-png-clip-art-thumbnail.png",
       formData: {
         current_health: null,
       },
+      tips: [
+        "In battle always choose a pokemon that have a type advantage against opponents pokemon",
+        "Every trainer can only have 6 pokemons at max",
+        "The more type diverse your line up is, the better",
+        "The lower the hp of a wild pokemon you're trying to catch the higher chances of capturing it",
+        "Unevolved pokemons will evolve once they reach level 15 or 30",
+        "Don't forget to have fun!",
+        "Let this load for a few minutes while I am gathering your opponents",
+        "I am currently in the process of gathering all of your opponents, please wait for a moment",
+        "Thank you for waiting",
+      ],
       gymLeader: [
         {
           name: "Brock",
@@ -156,7 +168,9 @@ class League extends Component {
   }
 
   componentDidMount = async () => {
-    console.log(localStorage.getItem("id"));
+    let currentTip = null;
+    currentTip = this.state.tips[0];
+    this.setState({ currentTip });
     const gymLeader = this.state.gymLeader;
     const eliteFour = this.state.eliteFour;
     let gymLeaderCopy = JSON.parse(JSON.stringify(gymLeader));
@@ -175,6 +189,12 @@ class League extends Component {
       });
     }
 
+    const user = await trainerPokemon();
+    const userHealed = user;
+    const userPokemon = user[0];
+    const userMoves = await getMoves(userPokemon.id);
+    this.setState({ user, userHealed, userPokemon, userMoves, heal: 5 });
+
     for (let i = 0; i < eliteFour.length; i++) {
       for (let j = 0; j < eliteFour[i].array.length; j++) {
         const id = eliteFour[i].array[j];
@@ -184,11 +204,6 @@ class League extends Component {
         eliteFour: eliteFourCopy,
       });
     }
-    const user = await trainerPokemon();
-    const userHealed = user;
-    const userPokemon = user[0];
-    const userMoves = await getMoves(userPokemon.id);
-    this.setState({ user, userHealed, userPokemon, userMoves, heal: 5 });
 
     const champion = await getChampion();
     console.log(champion);
@@ -215,7 +230,6 @@ class League extends Component {
     const message = npcContainer.message;
 
     const npcPokemon = npc.shift();
-    console.log(npcPokemon.id);
     const npcMoves = await getMoves(npcPokemon.id);
 
     this.setState({
@@ -228,7 +242,6 @@ class League extends Component {
       npcPokemon,
       npcMoves,
       isStart: true,
-      userWin: false,
     });
   };
 
@@ -391,7 +404,6 @@ class League extends Component {
     let randomNpcAttack = this.randomFunc(
       useAdvantage(this.state.npcMoves, typeUser)
     );
-    console.log(this.state.npcMoves);
     let npcAdvantage = typeAdvantage(randomNpcAttack.type, typeUser);
     let npcAttack =
       Math.floor(
@@ -445,7 +457,6 @@ class League extends Component {
       }.bind(this),
       2500
     );
-    console.log(userAttack);
 
     npcHealth = npcHealth - userAttack;
     userHealth = userHealth - npcAttack;
@@ -485,9 +496,13 @@ class League extends Component {
         });
 
         const resp = await update(id, passData);
-        console.log(this.state.npc.length);
       } else {
-        this.setState({ userWin: true, npcPokemon: null, battle: false });
+        this.setState({
+          userWin: true,
+          npcPokemon: null,
+          battle: false,
+          isStart: false,
+        });
       }
       this.evolution();
     } else if (userHealth < 0 || userHealth === 0) {
@@ -504,6 +519,7 @@ class League extends Component {
         current_health: 0,
       };
       if (this.state.user.length === 0) {
+        this.setState({ battle: true });
         setTimeout(
           function () {
             this.props.saySomething(
@@ -617,62 +633,53 @@ class League extends Component {
     this.setState({ userPokemon });
   };
 
+  anotherTip = () => {
+    let tip = this.state.tips;
+    let currentTip = tip[Math.floor(Math.random() * tip.length)];
+    this.props.saySomething(
+      "PATIENCE IS A VIRTUE, kindly refrain from clicking."
+    );
+    this.setState({ currentTip });
+  };
+
   render() {
     return (
       <div className="league">
         {!this.state.isStart && (
-          <div>
-            <h4>GYM LEADER</h4>
-            <div className="gym">
-              {this.state.gymLeader &&
-                this.state.gymLeader.map((data) => (
-                  <img className="leader" src={data.image} />
-                ))}
-            </div>
-
-            <h4>ELITE FOUR</h4>
-            <div className="elite">
-              {this.state.eliteFour &&
-                this.state.eliteFour.map((data) => (
-                  <img className="four" src={data.image} />
-                ))}
-            </div>
-            <button className="register" onClick={() => this.battleStart()}>
-              START
-            </button>
-          </div>
-        )}
-
-        {this.state.isChamp ? (
-          <>
-            <Outcome
-              result={this.state.userWin}
-              pokemon={this.state.user}
-              champ={this.state.champion}
-            />
-          </>
-        ) : (
-          <>
-            {this.state.userWin && (
-              <>
-                <div className="currentLeader">
-                  <h4>Gym Leader {this.state.currentNpc.name}</h4>
-                  <img
-                    className="currentLeaderImage"
-                    src={this.state.currentNpc.image}
-                  />
-                  <p>
-                    "{this.state.currentNpc.message}" -{" "}
-                    {this.state.currentNpc.name}
-                  </p>
+          <div className="league1">
+            {console.log(this.state)}
+            {this.state.eliteFour[3].pokemon.length > 0 && (
+              <div>
+                {this.state.gymLeader.length > 0 ? (
+                  <div className="opponent">
+                    <img src={this.state.gymLeader[0].image} />
+                    <div className="opponent1">
+                      <h5 className="tips">{this.state.gymLeader[0].name}</h5>
+                      {this.state.gymLeader && (
+                        <div>
+                          {this.state.gymLeader[0].pokemon.map((pokemon) => (
+                            <img src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png" />
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="opponent">
+                    <img src={this.state.eliteFour[0].image} />
+                    <h5>{this.state.eliteFour[0].name}</h5>
+                  </div>
+                )}
+                <div>
+                  <button
+                    className="register"
+                    onClick={() => this.battleStart()}
+                  >
+                    PROCEED
+                  </button>
                 </div>
                 <div>
-                  <img
-                    className="pokemon"
-                    src={this.state.userPokemon.frontImage}
-                  />
-                </div>
-                <div>
+                  <p className="tips">Choose your first pokemon.</p>
                   {this.state.user.map((pokemon, index) => (
                     <img
                       onClick={() => this.firstPokemon(index)}
@@ -680,13 +687,47 @@ class League extends Component {
                     />
                   ))}
                 </div>
-
-                <button className="register" onClick={() => this.battleStart()}>
-                  PROCEED
-                </button>
-              </>
+                <div>
+                  <img
+                    className="pokemon"
+                    src={this.state.userPokemon.frontImage}
+                  />
+                </div>
+              </div>
             )}
-          </>
+            {!this.state.eliteFour[3].pokemon.length > 0 && (
+              <div className="opening">
+                <img
+                  className="loading"
+                  src="https://media0.giphy.com/media/HU51xqIWYIumk/source.gif"
+                />
+                {this.state.currentTip && (
+                  <button className="tips" onClick={() => this.anotherTip()}>
+                    {this.state.currentTip}
+                  </button>
+                )}
+                {this.state.user && (
+                  <div>
+                    {this.state.user.map((pokemon) => (
+                      <img src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png" />
+                    ))}
+                    <p className="tips">
+                      Your pokemons are ready... You'll meet your opponent in a
+                      few sec.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {this.state.isChamp && (
+          <Outcome
+            result={this.state.userWin}
+            pokemon={this.state.user}
+            champ={this.state.champion}
+          />
         )}
 
         {this.state.npcPokemon && (

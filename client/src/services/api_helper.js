@@ -126,7 +126,7 @@ export const useAdvantage = (moves, pokemon) => {
 
     if (k === 2) answer = j;
   }
-  if (!answer) {
+  if (answer === null) {
     for (let i = 0; i < moves.length; i++) {
       let j = moves[i].type;
       let k = typeAdvantage(j, pokemon);
