@@ -372,7 +372,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/24.png",
     health: 350,
     current_health: 350,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -390,7 +390,7 @@ const main = async () => {
     level: 1,
     total_experience: 300,
     current_experience: 0,
-    fullyEvolved: false,
+    fullyEvolved: true,
     type: "Electric",
   });
 
@@ -402,7 +402,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/26.png",
     health: 370,
     current_health: 370,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1242,7 +1242,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/82.png",
     health: 350,
     current_health: 350,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1315,9 +1315,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/87.png",
-    health: 350,
-    current_health: 350,
-    level: 1,
+    health: 370,
+    current_health: 370,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1345,9 +1345,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/89.png",
-    health: 350,
-    current_health: 350,
-    level: 1,
+    health: 370,
+    current_health: 370,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1377,7 +1377,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/91.png",
     health: 370,
     current_health: 370,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1405,9 +1405,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/93.png",
-    health: 320,
-    current_health: 320,
-    level: 1,
+    health: 330,
+    current_health: 330,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
@@ -1422,7 +1422,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/94.png",
     health: 400,
     current_health: 400,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1467,7 +1467,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/97.png",
     health: 380,
     current_health: 380,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1527,7 +1527,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/101.png",
     health: 350,
     current_health: 350,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1557,7 +1557,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/103.png",
     health: 410,
     current_health: 410,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1600,9 +1600,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/106.png",
-    health: 370,
-    current_health: 370,
-    level: 1,
+    health: 330,
+    current_health: 330,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1615,9 +1615,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/107.png",
-    health: 370,
-    current_health: 370,
-    level: 1,
+    health: 330,
+    current_health: 330,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1632,7 +1632,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/108.png",
     health: 350,
     current_health: 350,
-    level: 1,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1662,7 +1662,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/110.png",
     health: 350,
     current_health: 350,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1675,9 +1675,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/111.png",
-    health: 300,
-    current_health: 300,
-    level: 1,
+    health: 320,
+    current_health: 320,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
@@ -1692,7 +1692,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/112.png",
     health: 400,
     current_health: 400,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1827,7 +1827,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/121.png",
     health: 370,
     current_health: 370,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1931,7 +1931,7 @@ const main = async () => {
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/128.png",
     health: 350,
-    current_health: 300,
+    current_health: 350,
     level: 30,
     total_experience: 300,
     current_experience: 0,
@@ -1962,7 +1962,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/130.png",
     health: 420,
     current_health: 420,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -1977,7 +1977,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/131.png",
     health: 420,
     current_health: 420,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -2022,7 +2022,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/134.png",
     health: 350,
     current_health: 350,
-    level: 30,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
@@ -2037,7 +2037,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/135.png",
     health: 350,
     current_health: 350,
-    level: 30,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -2052,7 +2052,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/136.png",
     health: 350,
     current_health: 350,
-    level: 30,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
@@ -2232,7 +2232,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/148.png",
     health: 350,
     current_health: 380,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
@@ -2247,7 +2247,7 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/149.png",
     health: 480,
     current_health: 300,
-    level: 1,
+    level: 30,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -2284,6 +2284,96 @@ const main = async () => {
     type: "Psychic",
   });
 
+  const pokemon447 = await Pokemon.create({
+    name: "Riolu",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/447.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/447.png",
+    health: 300,
+    current_health: 300,
+    level: 1,
+    total_experience: 300,
+    current_experience: 0,
+    fullyEvolved: false,
+    type: "Fighting",
+  });
+
+  const pokemon448 = await Pokemon.create({
+    name: "Lucario",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/448.png",
+    health: 350,
+    current_health: 350,
+    level: 15,
+    total_experience: 300,
+    current_experience: 0,
+    fullyEvolved: true,
+    type: "Fighting",
+  });
+
+  const pokemon252 = await Pokemon.create({
+    name: "Treecko",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/252.png",
+    health: 300,
+    current_health: 300,
+    level: 1,
+    total_experience: 300,
+    current_experience: 0,
+    fullyEvolved: false,
+    type: "Grass",
+  });
+
+  const pokemon253 = await Pokemon.create({
+    name: "Grovyle",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/253.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/253.png",
+    health: 350,
+    current_health: 350,
+    level: 15,
+    total_experience: 300,
+    current_experience: 0,
+    fullyEvolved: false,
+    type: "Grass",
+  });
+
+  const pokemon254 = await Pokemon.create({
+    name: "Sceptile",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/254.png",
+    health: 400,
+    current_health: 400,
+    level: 30,
+    total_experience: 300,
+    current_experience: 0,
+    fullyEvolved: true,
+    type: "Grass",
+  });
+
+  const pokemon255 = await Pokemon.create({
+    name: "Sceptile",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/254.png",
+    health: 400,
+    current_health: 400,
+    level: 30,
+    total_experience: 300,
+    current_experience: 0,
+    fullyEvolved: true,
+    type: "Grass",
+  });
+
   const tackle = [];
   const ember = [];
   const flameThrower = [];
@@ -2292,7 +2382,7 @@ const main = async () => {
   const waterGun = [];
   const surf = [];
   const takeDown = [];
-  const thundereBolt = [];
+  const thunderBolt = [];
   const quickAttack = [];
   const swift = [];
   const psywave = [];
@@ -2302,7 +2392,7 @@ const main = async () => {
   const acid = [];
   const confusion = [];
 
-  for (let i = 0; i <= 50; i++) {
+  for (let i = 0; i <= 150; i++) {
     const j = await Move.create({
       name: "Tackle",
       attack: 35,
@@ -2357,6 +2447,7 @@ const main = async () => {
       attack: 65,
       animation:
         "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+      type: "Grass",
     });
 
     const n = await Move.create({
@@ -2446,7 +2537,7 @@ const main = async () => {
     vineWhip.push(n);
     surf.push(p);
     takeDown.push(q);
-    thundereBolt.push(r);
+    thunderBolt.push(r);
     swift.push(t);
     psywave.push(u);
     rockThrow.push(v);
@@ -2550,17 +2641,25 @@ const main = async () => {
     type: "Fighting",
   });
 
+  const seismicToss5 = await Move.create({
+    name: "Seismic Toss",
+    attack: 55,
+    animation:
+      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+    type: "Fighting",
+  });
+
   const thunder = await Move.create({
     name: "Thunder",
     attack: 120,
-    animation: "https://media3.giphy.com/media/ebQMQkzmJNT7G/source.gif",
+    animation: "https://i.gifer.com/4bXG.gif",
     type: "Electric",
   });
 
   const thunder1 = await Move.create({
     name: "Thunder",
     attack: 120,
-    animation: "https://media3.giphy.com/media/ebQMQkzmJNT7G/source.gif",
+    animation: "https://i.gifer.com/4bXG.gif",
     type: "Electric",
   });
 
@@ -2655,40 +2754,42 @@ const main = async () => {
   const icePunch = await Move.create({
     name: "Ice Punch",
     attack: 55,
-    animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+    animation: "https://i.ya-webdesign.com/images/anime-effects-png-11.png",
     type: "Ice",
   });
 
   const icePunch1 = await Move.create({
     name: "Ice Punch",
     attack: 55,
-    animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+    animation: "https://i.ya-webdesign.com/images/anime-effects-png-11.png",
     type: "Ice",
   });
 
   const icePunch2 = await Move.create({
     name: "Ice Punch",
     attack: 55,
-    animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+    animation: "https://i.ya-webdesign.com/images/anime-effects-png-11.png",
     type: "Ice",
   });
 
   const icePunch3 = await Move.create({
     name: "Ice Punch",
     attack: 55,
-    animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+    animation: "https://i.ya-webdesign.com/images/anime-effects-png-11.png",
     type: "Ice",
   });
 
   const icePunch4 = await Move.create({
     name: "Ice Punch",
     attack: 75,
-    animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+    animation: "https://i.ya-webdesign.com/images/anime-effects-png-11.png",
+    type: "Ice",
+  });
+
+  const icePunch5 = await Move.create({
+    name: "Ice Punch",
+    attack: 65,
+    animation: "https://i.ya-webdesign.com/images/anime-effects-png-11.png",
     type: "Ice",
   });
 
@@ -2726,7 +2827,7 @@ const main = async () => {
 
   const thunderPunch4 = await Move.create({
     name: "Thunder Punch",
-    attack: 55,
+    attack: 65,
     animation:
       "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
     type: "Electric",
@@ -2776,15 +2877,15 @@ const main = async () => {
     name: "Shadow Ball",
     attack: 75,
     animation:
-      "https://thumbs.gfycat.com/SickEnchantingAdamsstaghornedbeetle-small.gif",
+      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/96269ce8-4a07-4702-936a-6860e1b5594f/dc62zhb-097d58db-0e51-4e7e-b3b4-8cee199d08a4.png/v1/fit/w_150,h_150,strp/shadow_ball__redesign__by_venjix5_dc62zhb-150.png",
     type: "Ghost",
   });
 
   const shadowBall1 = await Move.create({
     name: "Shadow Ball",
-    attack: 75,
+    attack: 90,
     animation:
-      "https://thumbs.gfycat.com/SickEnchantingAdamsstaghornedbeetle-small.gif",
+      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/96269ce8-4a07-4702-936a-6860e1b5594f/dc62zhb-097d58db-0e51-4e7e-b3b4-8cee199d08a4.png/v1/fit/w_150,h_150,strp/shadow_ball__redesign__by_venjix5_dc62zhb-150.png",
     type: "Ghost",
   });
 
@@ -2986,11 +3087,27 @@ const main = async () => {
     type: "Ground",
   });
 
+  const earthQuake7 = await Move.create({
+    name: "Earth Quake",
+    attack: 120,
+    animation:
+      "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
+    type: "Ground",
+  });
+
+  const earthQuake8 = await Move.create({
+    name: "Earth Quake",
+    attack: 120,
+    animation:
+      "https://cdn.clipart.email/2bb6cad1e3152775c39760e8f4999e64_explosion-animated-gif-clipart-best-transparent-explosion-gif-lowgif_2000-2000.gif",
+    type: "Ground",
+  });
+
   const rockSlide = await Move.create({
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -2998,7 +3115,7 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3006,7 +3123,7 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3014,7 +3131,7 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3022,7 +3139,7 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3030,15 +3147,15 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
   const rockSlide6 = await Move.create({
     name: "Rock Slide",
-    attack: 65,
+    attack: 75,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3046,7 +3163,7 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3054,7 +3171,7 @@ const main = async () => {
     name: "Rock Slide",
     attack: 65,
     animation:
-      "https://cdna.artstation.com/p/assets/images/images/015/934/194/original/joshua-gates-quick-explosion.gif?1550235110",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3062,7 +3179,7 @@ const main = async () => {
     name: "Stone Edge",
     attack: 100,
     animation:
-      "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3070,7 +3187,7 @@ const main = async () => {
     name: "Stone Edge",
     attack: 100,
     animation:
-      "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3078,7 +3195,7 @@ const main = async () => {
     name: "Stone Edge",
     attack: 100,
     animation:
-      "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3086,7 +3203,7 @@ const main = async () => {
     name: "Stone Edge",
     attack: 100,
     animation:
-      "hhttps://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
+      "https://i.ya-webdesign.com/images/boulder-drawing-broken-rock-6.gif",
     type: "Rock",
   });
 
@@ -3131,48 +3248,42 @@ const main = async () => {
   const dragonClaw = await Move.create({
     name: "Dragon Claw",
     attack: 90,
-    animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+    animation: "https://i.dlpng.com/static/png/201045_preview.png",
     type: "Dragon",
   });
 
   const dragonClaw1 = await Move.create({
     name: "Dragon Claw",
     attack: 90,
-    animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+    animation: "https://i.dlpng.com/static/png/201045_preview.png",
     type: "Dragon",
   });
 
   const dragonClaw2 = await Move.create({
     name: "Dragon Claw",
     attack: 90,
-    animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+    animation: "https://i.ya-webdesign.com/images/slash-effect-png-9.png",
     type: "Dragon",
   });
 
   const dragonClaw3 = await Move.create({
     name: "Dragon Claw",
     attack: 90,
-    animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+    animation: "https://i.dlpng.com/static/png/201045_preview.png",
     type: "Dragon",
   });
 
   const dragonClaw4 = await Move.create({
     name: "Dragon Claw",
     attack: 90,
-    animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+    animation: "https://i.dlpng.com/static/png/201045_preview.png",
     type: "Dragon",
   });
 
   const dragonClaw5 = await Move.create({
     name: "Dragon Claw",
     attack: 90,
-    animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+    animation: "https://i.dlpng.com/static/png/201045_preview.png",
     type: "Dragon",
   });
 
@@ -3180,7 +3291,7 @@ const main = async () => {
     name: "Dragon Rush",
     attack: 100,
     animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-4.gif",
+      "https://pa1.narvii.com/6881/3e2030d2b7d2ffe47e7fd0fa6fea2b7ce27f43fdr1-350-500_hq.gif",
     type: "Dragon",
   });
 
@@ -3188,7 +3299,7 @@ const main = async () => {
     name: "Dragon Rush",
     attack: 100,
     animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-4.gif",
+      "https://pa1.narvii.com/6881/3e2030d2b7d2ffe47e7fd0fa6fea2b7ce27f43fdr1-350-500_hq.gif",
     type: "Dragon",
   });
 
@@ -3196,8 +3307,67 @@ const main = async () => {
     name: "Night Shade",
     attack: 100,
     animation:
-      "https://orangemushroom.files.wordpress.com/2016/07/demon-awakening-effect-slash-3.gif",
+      "https://thumbs.gfycat.com/SickEnchantingAdamsstaghornedbeetle-small.gif",
     type: "Ghost",
+  });
+
+  const auraSphere = await Move.create({
+    name: "Aura Sphere",
+    attack: 80,
+    animation: "https://i.ya-webdesign.com/images/transparent-orb-magic-11.gif",
+    type: "Fighting",
+  });
+
+  const forcePalm = await Move.create({
+    name: "Force Palm",
+    attack: 120,
+    animation: "https://media0.giphy.com/media/1msyF7j2886WrEV1mR/source.gif",
+    type: "Fighting",
+  });
+
+  const boneRush = await Move.create({
+    name: "Bone Rush",
+    attack: 90,
+    animation: "https://i.ya-webdesign.com/images/slash-effect-png-9.png",
+    type: "Ground",
+  });
+
+  const leafStorm = await Move.create({
+    name: "Leaf Storm",
+    attack: 120,
+    animation:
+      "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+    type: "Grass",
+  });
+
+  const leafBlade = await Move.create({
+    name: "Leaf Blade",
+    attack: 90,
+    animation: "https://i.ya-webdesign.com/images/transparent-laser-shot-6.gif",
+    type: "Grass",
+  });
+
+  const xScissor = await Move.create({
+    name: "X-Scissor",
+    attack: 90,
+    animation:
+      "https://images.vexels.com/media/users/3/155299/isolated/preview/1988d1faba4d059eb4461d955af5cf61-x-mark-scribble-by-vexels.png",
+    type: "Bug",
+  });
+
+  const dreamEater = await Move.create({
+    name: "Dream Eater",
+    attack: 100,
+    animation:
+      "https://i.pinimg.com/originals/55/f0/c0/55f0c002c2627af58ccaaf11d3bc4c41.gif",
+    type: "Psychic",
+  });
+
+  const dummy = await Move.create({
+    name: "Dummy",
+    attack: 1200,
+    animation: "",
+    type: "Fire",
   });
 
   await pokemon1.addMove(tackle[0]);
@@ -3389,11 +3559,11 @@ const main = async () => {
   await pokemon24.addMove(acid[2]);
 
   await pokemon25.addMove(quickAttack[7]);
-  await pokemon25.addMove(thundereBolt);
   await pokemon25.addMove(thunder);
+  await pokemon25.addMove(thunderBolt[0]);
 
   await pokemon26.addMove(quickAttack[8]);
-  await pokemon26.addMove(thundereBolt);
+  await pokemon26.addMove(thunderBolt[1]);
   await pokemon26.addMove(thunder1);
 
   await pokemon27.addMove(tackle[48]);
@@ -3414,12 +3584,11 @@ const main = async () => {
   await pokemon31.addMove(earthQuake1);
   await pokemon31.addMove(rockSlide7);
 
-  await pokemon32.addMove(tackle[53]);
+  await pokemon32.addMove(tackle[55]);
 
   await pokemon33.addMove(tackle[54]);
   await pokemon33.addMove(acid[4]);
 
-  await pokemon34.addMove(tackle[55]);
   await pokemon34.addMove(toxic[4]);
   await pokemon34.addMove(acid[5]);
   await pokemon34.addMove(earthQuake2);
@@ -3546,6 +3715,7 @@ const main = async () => {
   await pokemon76.addMove(tackle[86]);
   await pokemon76.addMove(rockThrow[6]);
   await pokemon76.addMove(rockSlide2);
+  await pokemon76.addMove(earthQuake6);
 
   await pokemon77.addMove(tackle[87]);
   await pokemon77.addMove(ember[8]);
@@ -3557,7 +3727,7 @@ const main = async () => {
   await pokemon81.addMove(tackle[89]);
 
   await pokemon82.addMove(tackle[90]);
-  await pokemon82.addMove(thundereBolt);
+  await pokemon82.addMove(thunderBolt[2]);
   await pokemon82.addMove(quickAttack[42]);
 
   await pokemon83.addMove(tackle[91]);
@@ -3587,21 +3757,23 @@ const main = async () => {
   await pokemon89.addMove(toxic[10]);
 
   await pokemon92.addMove(tackle[98]);
+  await pokemon92.addMove(acid[10]);
 
-  await pokemon93.addMove(tackle[99]);
   await pokemon93.addMove(quickAttack[22]);
+  await pokemon93.addMove(acid[11]);
   await pokemon93.addMove(shadowBall);
 
-  await pokemon94.addMove(quickAttack[23]);
   await pokemon94.addMove(toxic[11]);
+  await pokemon93.addMove(acid[12]);
   await pokemon94.addMove(shadowBall1);
   await pokemon94.addMove(nightShade);
   await pokemon94.addMove(thunderPunch4);
+  await pokemon94.addMove(dreamEater);
 
   await pokemon95.addMove(tackle[100]);
   await pokemon95.addMove(rockSlide3);
   await pokemon95.addMove(rockThrow[7]);
-  await pokemon95.addMove(earthQuake6);
+  await pokemon95.addMove(earthQuake7);
 
   await pokemon96.addMove(tackle[101]);
   await pokemon96.addMove(confusion[3]);
@@ -3615,7 +3787,7 @@ const main = async () => {
 
   await pokemon101.addMove(tackle[104]);
   await pokemon101.addMove(swift[5]);
-  await pokemon101.addMove(thundereBolt);
+  await pokemon101.addMove(thunderBolt[3]);
 
   await pokemon102.addMove(tackle[105]);
 
@@ -3681,7 +3853,7 @@ const main = async () => {
   await pokemon124.addMove(icePunch3);
 
   await pokemon125.addMove(tackle[121]);
-  await pokemon125.addMove(thundereBolt);
+  await pokemon125.addMove(thunderBolt[4]);
   await pokemon125.addMove(thunderPunch1);
 
   await pokemon126.addMove(tackle[122]);
@@ -3705,7 +3877,7 @@ const main = async () => {
 
   await pokemon135.addMove(tackle[127]);
   await pokemon135.addMove(quickAttack[30]);
-  await pokemon135.addMove(thundereBolt);
+  await pokemon135.addMove(thunderBolt[5]);
 
   await pokemon136.addMove(tackle[128]);
   await pokemon136.addMove(quickAttack[31]);
@@ -3731,7 +3903,7 @@ const main = async () => {
 
   await pokemon145.addMove(quickAttack[34]);
   await pokemon145.addMove(wingAttack);
-  await pokemon145.addMove(thundereBolt);
+  await pokemon145.addMove(thunderBolt[6]);
   await pokemon145.addMove(skyAttack1);
 
   await pokemon146.addMove(quickAttack[35]);
@@ -3762,6 +3934,32 @@ const main = async () => {
   await pokemon151.addMove(dragonClaw3);
   await pokemon151.addMove(psywave[6]);
   await pokemon151.addMove(psychic3);
+
+  await pokemon447.addMove(tackle[140]);
+  await pokemon447.addMove(seismicToss5);
+
+  await pokemon448.addMove(auraSphere);
+  await pokemon448.addMove(thunderPunch2);
+  await pokemon448.addMove(forcePalm);
+  await pokemon448.addMove(boneRush);
+  await pokemon448.addMove(rockSlide6);
+  await pokemon448.addMove(icePunch5);
+
+  await pokemon252.addMove(tackle[141]);
+  await pokemon252.addMove(razorLeaf[15]);
+
+  await pokemon253.addMove(tackle[142]);
+  await pokemon253.addMove(razorLeaf[16]);
+  await pokemon253.addMove(slash6);
+
+  await pokemon254.addMove(razorLeaf[17]);
+  await pokemon254.addMove(slash7);
+  await pokemon254.addMove(dragonClaw2);
+  await pokemon254.addMove(leafBlade);
+  await pokemon254.addMove(leafStorm);
+  await pokemon254.addMove(xScissor);
+
+  await pokemon255.addMove(dummy);
 
   // await admin.addPokemon(poke);
 
