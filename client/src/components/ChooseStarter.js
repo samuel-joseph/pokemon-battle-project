@@ -12,6 +12,7 @@ class ChooseStarter extends Component {
     super(props);
 
     this.state = {
+      num: [1, 4, 7, 92, 152, 154],
       ownPokemon: null,
       chosenPokemonId: null,
       starters: [],
@@ -50,10 +51,18 @@ class ChooseStarter extends Component {
   componentDidMount = async () => {
     const starters = [];
     const starterMoves = [];
-    const id = [1, 4, 7];
+    const num = this.state.num;
+    let id = [];
+    for (let i = 0; i < 3; i++) {
+      let index = Math.floor(Math.random() * Math.floor(num.length));
+      id.push(num.splice(index, 1));
+    }
+    console.log(id);
+
     for (let i = 0; i < 3; i++) {
       const resp = await getPokemon(id[i]);
       const resp1 = await getMoves(id[i]);
+      console.log(resp1);
       starters.push(resp);
       starterMoves.push(resp1);
     }
@@ -129,11 +138,34 @@ class ChooseStarter extends Component {
 
   savePokemon = async () => {
     const pokemon = await storePokemon(this.state.formData);
-    console.log(pokemon.data.id);
+    // const resp = await getPokemon(25);
+    // const respMove = await getMoves(25);
+    // const data = {
+    //   name: resp.name,
+    //   frontImage: resp.frontImage,
+    //   backImage: resp.backImage,
+    //   level: resp.level,
+    //   health: resp.health,
+    //   current_health: resp.current_health,
+    //   current_experience: resp.current_experience,
+    //   total_experience: resp.total_experience,
+    //   fullyEvolved: resp.fullyEvolved,
+    //   type: resp.type,
+    // };
+    // const getPika = await storePokemon(data);
+    // for (let i = 0; i < respMove.length; i++) {
+    //   let dataMove = {
+    //     name: respMove[i].name,
+    //     attack: respMove[i].attack,
+    //     animation: respMove[i].animation,
+    //     type: respMove[i].type,
+    //   };
+    //   await addMoves(getPika.id, dataMove);
+    // }
     const id = pokemon.data.id;
     const move1 = await addMoves(id, this.state.moveData1);
     const move2 = await addMoves(id, this.state.moveData2);
-    this.props.history.push("/trainer");
+    this.props.history.push("/newPokemon");
   };
 
   render() {

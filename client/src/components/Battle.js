@@ -10,6 +10,7 @@ import {
   ownedPokemon,
   getPokemon,
   removeMove,
+  getAllPokemon,
   typeAdvantage,
   useAdvantage,
 } from "../services/api_helper";
@@ -41,7 +42,8 @@ class Battle extends Component {
       npcAttack: null,
       userPokemon: null,
       userPokemonAttacks: null,
-      fighterPokemon: [],
+      fighterPokemon: null,
+      evolveId: null,
       catch: false,
       change: false,
       formData: {
@@ -127,6 +129,10 @@ class Battle extends Component {
     return response;
   }
 
+  levelUp = (level) => {
+    this.setState({ fighterPokemon: { ...this.state.fighterPokemon, level } });
+  };
+
   evolution = async () => {
     let userHealth = this.state.fighterPokemon.current_health;
     let fullyEvolved = this.state.fighterPokemon.fullyEvolved;
@@ -144,32 +150,52 @@ class Battle extends Component {
 
     switch (this.state.npc.level) {
       case 1:
-        gain = Math.floor(presetXP * 4 * (1.75 + level * 0.075));
+        gain = Math.floor(presetXP * 4 * 1.75);
         break;
       case 15:
-        gain = Math.floor(presetXP * 6 * (1.75 + level * 0.075));
+        gain = Math.floor(presetXP * 6 * 1.75);
         break;
       case 30:
-        gain = gain = Math.floor(presetXP * 8 * (1.75 + level * 0.075));
+        gain = gain = Math.floor(presetXP * 8 * 1.75);
         break;
       case "bonus":
         gain = Math.floor(presetXP * 10 * (1.75 + level * 0.075));
         break;
     }
 
-    this.props.saySomething(
-      `${this.state.fighterPokemon.name} earned ${gain} worth experiece!`
-    );
     current_experience += gain;
-
+    setTimeout(
+      function () {
+        this.props.saySomething(
+          `${this.state.fighterPokemon.name} earned ${gain} worth experiece!`
+        );
+      }.bind(this),
+      3900
+    );
     if (level < 50) {
       while (current_experience >= total_experience) {
         level++;
+        this.levelUp(level);
+        setTimeout(
+          function () {
+            this.props.saySomething(
+              `LEVEL UP to LV ${level}! ${this.state.fighterPokemon.name} earned ${gain} worth experiece!`
+            );
+          }.bind(this),
+          4000
+        );
         health += 2;
         current_experience = current_experience - total_experience;
-        total_experience += 300;
-        if ((level === 15 || level === 30) && fullyEvolved === false) {
-          this.setState({ evolve: true });
+        total_experience += 1200;
+        if ((level === 4 || level === 8) && fullyEvolved === false) {
+          let evolveId = null;
+          let pokemons = await getAllPokemon();
+          for (let i = 0; i < pokemons.length; i++) {
+            if (this.state.fighterPokemon.name === pokemons[i].name) {
+              evolveId = pokemons[i].id + 1;
+            }
+          }
+          this.setState({ evolve: true, evolveId });
         }
       }
     }
@@ -278,19 +304,6 @@ class Battle extends Component {
         },
       });
     }
-
-    // if (npcHealth <= 0 && userHealth <= 0) {
-    //   setTimeout(
-    //     function() {
-    //       this.setState({
-    //         npc: { ...this.state.npc, current_health: 0 },
-    //         fighterPokemon: { ...this.state.user, current_health: 0 },
-    //         formData: { ...this.state.formData, current_health: userHealth }
-    //       });
-    //     }.bind(this),
-    //     2000
-    //   );
-    // }
     if (npcHealth < 0 || npcHealth === 0) {
       const passData = {
         current_health: userHealth,
@@ -316,6 +329,7 @@ class Battle extends Component {
       const passData = {
         current_health: 0,
       };
+
       if (this.state.userPokemon.length === 0) {
         setTimeout(
           function () {
@@ -388,7 +402,7 @@ class Battle extends Component {
     const totalHp = this.state.fighterPokemon.health;
     const chance = totalHp * 0.07;
     const dice = totalHp * 0.07;
-    console.log(totalHp * 0.07);
+    console.log();
     // Math.floor(Math.random() * Math.floor(hp));
     this.props.saySomething(
       `Trainer ${localStorage.getItem("name")} throws a pokeball!`
@@ -400,6 +414,7 @@ class Battle extends Component {
           this.props.saySomething(`You caught a ${this.state.npc.name}!`);
           this.storePokemon();
           this.setState({ battle: true, userPokemon: null });
+          this.props.history.push("/newPokemon");
         } else {
           this.props.saySomething("Your pokeball broke!");
           this.setState({ catch: false });
@@ -471,11 +486,13 @@ class Battle extends Component {
               <Evolution
                 saySomething={(e) => this.props.saySomething(e)}
                 pokemon={this.state.fighterPokemon}
+                evolveId={this.state.evolveId}
               />
             ) : (
               <>
                 {this.state.userPokemon && (
                   <div>
+                    {console.log(this.state.count)}
                     <div className="forestBat">
                       <div className="npc">
                         <div>
@@ -503,7 +520,7 @@ class Battle extends Component {
                                   </div>
                                 </div>
                               </div>
-                              <div>
+                              <div className="testNpc">
                                 {this.state.npc.current_health ? (
                                   <img
                                     className={
@@ -543,7 +560,7 @@ class Battle extends Component {
                       )}
                       <div>
                         <div className="userA">
-                          <div>
+                          <div className="testUser">
                             {this.state.npcAnimation && (
                               <img
                                 className="npcFX"

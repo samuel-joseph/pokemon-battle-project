@@ -21,6 +21,7 @@ import Trainer from "./components/Trainer";
 import Pokecenter from "./components/Pokecenter";
 import League from "./components/League";
 import Menu from "./components/Menu";
+import Captured from "./components/Captured";
 
 class App extends Component {
   constructor(props) {
@@ -189,7 +190,6 @@ class App extends Component {
             path="/menu"
             render={() => <Menu saySomething={(e) => this.saySomething(e)} />}
           />
-          <Route path="/pokemons/pokedex" render={() => <Pokedex />} />
           <Route
             path="/trainer"
             render={() => (
@@ -199,7 +199,18 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/pokecenter" render={() => <Pokecenter />} />
+          <Route
+            path="/newPokemon"
+            render={() => (
+              <Captured saySomething={(e) => this.saySomething(e)} />
+            )}
+          />
+          <Route
+            path="/pokecenter"
+            render={() => (
+              <Pokecenter saySomething={(e) => this.saySomething(e)} />
+            )}
+          />
         </div>
         <>
           {this.state.currentUser && (

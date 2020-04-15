@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "http://localhost:3001",
-  baseURL: "https://mysterious-chamber-56831.herokuapp.com/",
+  baseURL: "http://localhost:3001",
+  // baseURL: "https://mysterious-chamber-56831.herokuapp.com/",
 });
 
 export const loginUser = async (loginData) => {
@@ -59,7 +59,7 @@ export const userData = async () => {
 };
 
 export const getAllPokemon = async () => {
-  const resp = await api.get("pokemons/pokedex");
+  const resp = await api.get("/pokemons");
   return resp.data.pokemons;
 };
 
@@ -117,27 +117,31 @@ export const removeMove = async (pokemonId, moveId) => {
 };
 
 export const useAdvantage = (moves, pokemon) => {
-  console.log(moves);
-  let answer = null;
+  let answer = [];
   let use = [];
   for (let i = 0; i < moves.length; i++) {
     let j = moves[i].type;
     let k = typeAdvantage(j, pokemon);
 
-    if (k === 2) answer = j;
+    if (k === 2) answer.push(j);
   }
-  if (answer === null) {
+
+  if (answer.length === 0) {
     for (let i = 0; i < moves.length; i++) {
       let j = moves[i].type;
       let k = typeAdvantage(j, pokemon);
+      console.log(k);
 
-      if (k === 1) answer = j;
+      if (k === 1) answer.push(j);
     }
+    if (answer.length === 0) return moves;
   }
   if (answer) {
     for (let i = 0; i < moves.length; i++) {
-      if (moves[i].type === answer) {
-        use.push(moves[i]);
+      for (let j = 0; j < answer.length; j++) {
+        if (moves[i].type === answer[j]) {
+          use.push(moves[i]);
+        }
       }
     }
     return use;

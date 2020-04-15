@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { getChampion } from "../services/api_helper";
+import { getChampion, getAllPokemon } from "../services/api_helper";
 
 export default class Menu extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      champion: null
+      champion: null,
     };
   }
 
   componentDidMount = async () => {
     const champion = await getChampion();
+
     if (champion) {
       this.props.saySomething(
         `Here is the menu... Be the greatest trainer by defeating the Reigning Champion!`
@@ -24,7 +25,7 @@ export default class Menu extends Component {
       );
     }
     this.setState({
-      champion
+      champion,
     });
   };
 

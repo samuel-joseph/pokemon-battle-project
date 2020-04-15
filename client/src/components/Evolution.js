@@ -7,7 +7,7 @@ import {
   update,
   getPokemon,
   removeMove,
-  addMoves
+  addMoves,
 } from "../services/api_helper";
 
 class Evolution extends Component {
@@ -21,18 +21,20 @@ class Evolution extends Component {
       moves: null,
       movesLoad: false,
       testMoves: null,
-      testMovesF: null
+      testMovesF: null,
     };
   }
 
   componentDidMount = async () => {
+    console.log("AM I HERE");
     let prevPokemon = this.props.pokemon;
     this.props.saySomething(`Your ${prevPokemon.name} is about to evolve!!!`);
     let num = prevPokemon.frontImage.match(/\d+/g).map(Number);
     let id = prevPokemon.id;
+    let evolveId = this.props.evolveId;
 
     num++;
-    let evolvePokemon = await getPokemon(num);
+    let evolvePokemon = await getPokemon(evolveId);
     let type = evolvePokemon.type;
     let name = evolvePokemon.name;
     let health = evolvePokemon.health;
@@ -40,7 +42,7 @@ class Evolution extends Component {
     let frontImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png`;
     let backImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon//back/${num}.png`;
     let fullyEvolved = evolvePokemon.fullyEvolved;
-    let resp = await getMoves(num);
+    let resp = await getMoves(evolveId);
     let del = await getMoves(id);
     let testMoves = [];
     for (let i = 0; i < del.length; i++) {
@@ -60,7 +62,7 @@ class Evolution extends Component {
       fullyEvolved,
       frontImage,
       backImage,
-      type
+      type,
     };
     const resp1 = await update(id, passData);
     let pokemon = await getPokemon(id);
@@ -72,7 +74,7 @@ class Evolution extends Component {
       name: moves.name,
       attack: moves.attack,
       animation: moves.animation,
-      type: moves.type
+      type: moves.type,
     };
 
     let resp = await addMoves(id, postMoveCopy);
@@ -85,15 +87,16 @@ class Evolution extends Component {
     this.setState({ isClick: true });
     // let moves = await getMoves(id);
     setTimeout(
-      function() {
+      function () {
         if (this.state.moves.length > 4) {
           this.props.saySomething(
             `CONGRATULATIONS! Your ${
               this.state.prevPokemon.name
             } evolved into ${this.state.pokemon.name}! However, ${
               this.state.pokemon.name
-            } have more than 4 moves, delete ${this.state.moves.length -
-              4} to continue!`
+            } have more than 4 moves, delete ${
+              this.state.moves.length - 4
+            } to continue!`
           );
         } else {
           this.props.saySomething(
@@ -113,9 +116,9 @@ class Evolution extends Component {
     moves.splice(index, 1);
     if (this.state.moves.length > 4) {
       this.props.saySomething(
-        `${move.name} is removed from ${
-          this.state.pokemon.name
-        }. ${moves.length - 4} more!`
+        `${move.name} is removed from ${this.state.pokemon.name}. ${
+          moves.length - 4
+        } more!`
       );
     } else {
       this.props.saySomething(
@@ -153,7 +156,7 @@ class Evolution extends Component {
                     {this.state.moves.length > 4 && (
                       <button
                         className="deleteMove"
-                        onClick={e => this.delete(index, move)}
+                        onClick={(e) => this.delete(index, move)}
                       >
                         DEL
                       </button>

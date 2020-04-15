@@ -53,8 +53,25 @@ img {
   width: 15vw;
 }
 
+.npcPokeball {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
+
+.newPokemon {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow: scroll;
+}
+
 .pokemon {
   width: 50vw;
+}
+
+.pokemon1 {
+  width: 100vw;
 }
 
 .label {
@@ -111,6 +128,16 @@ p {
   justify-content: center;
   align-items: center;
   border-top: solid black;
+}
+
+.testUser {
+  width: 50vw;
+  height: 25vh;
+}
+
+.testNpc {
+  width: 50vw;
+  height: 25vh;
 }
 
 .header {
@@ -269,6 +296,8 @@ h4 {
 
 .forestBat {
   background-image: linear-gradient(-60deg, green, black);
+  height: 65vh;
+  overflow: scroll;
 }
 
 .tips {
@@ -381,9 +410,14 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background-color: white;
-  height: 25%;
+  height: 20%;
+  padding-top: 5%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 .sparePokemons1 {
@@ -435,7 +469,6 @@ h4 {
 .userB {
   display: flex;
   flex-direction: column;
-  /* background-color: rgba(0, 0, 0, 0.7); */
   color: white;
   font-weight: bold;
 }
@@ -627,7 +660,6 @@ h4 {
   align-items: center;
   position: fixed;
   width: 100vw;
-  margin-top: 15vh;
 }
 
 .loading {
@@ -795,7 +827,7 @@ h4 {
   }
   45% {
     margin-left: 3%;
-    /* margin-top: -10%; */
+    margin-top: -2%;
   }
   100% {
     margin-left: 0%;
@@ -806,23 +838,75 @@ h4 {
 @keyframes npcAttack {
   0% {
     margin-left: 0%;
+    opacity: 0;
+  }
+  25% {
+    /* transform: rotateZ(-15deg); */
+    opacity: 0.5;
+    margin-top: 10%;
+    transform: rotateZ(5deg);
+  }
+  35% {
+    margin-left: -120%;
+    margin-top: 25%;
+    opacity: 1;
+    transform: rotateZ(-25deg);
+  }
+  50% {
+    /* margin-left: -50%; */
+    /* margin-top: 0%;
+    /* opacity: 0; */
+    /* transform: rotateZ(0deg);  */
+    /* opacity: 1; */
+  }
+  75% {
+    /* margin-left: -15%; */
+    /* margin-top: -15%; */
   }
   100% {
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-top: 0%;
+    opacity: 1;
   }
 }
 
 @keyframes userAttack {
   0% {
     margin-right: 0%;
+    opacity: 0;
   }
-  45% {
-    margin-left: 10%;
-    /* margin-top: -10%; */
+
+  20% {
+    /* transform: rotateZ(-15deg); */
+  }
+
+  22% {
+    margin-left: 70%;
+    margin-top: -100%;
+    opacity: 1;
+    /* transform: rotateZ(15deg); */
+  }
+  30% {
+    margin-left: 150%;
+    margin-top: -100%;
+    opacity: 0;
+    transform: rotateZ(15deg);
+  }
+
+  50% {
+    margin-left: 50%;
+    margin-top: -50%;
+    opacity: 0.8;
+    transform: rotateZ(0deg);
+  }
+  75% {
+    margin-left: 15%;
+    /* margin-top: -15%; */
   }
   100% {
     margin-left: 0%;
     margin-top: 0%;
+    opacity: 1;
   }
 }
 

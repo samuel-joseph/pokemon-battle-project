@@ -22,6 +22,7 @@ class Pokecenter extends Component {
   }
 
   componentDidMount = async () => {
+    this.props.saySomething("Heal your pokemons by pressing HEAL!");
     const user = await trainerPokemon();
     this.setState({ user });
     console.log(user);
@@ -29,6 +30,7 @@ class Pokecenter extends Component {
 
   heal = async () => {
     const user = this.state.user;
+    this.props.saySomething("All of your pokemons are now ready to battle!");
     for (let i = 0; i < user.length; i++) {
       let id = user[i].id;
       let fullHp = user[i].health;
