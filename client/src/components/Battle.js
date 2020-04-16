@@ -187,7 +187,7 @@ class Battle extends Component {
         health += 2;
         current_experience = current_experience - total_experience;
         total_experience += 1200;
-        if ((level === 4 || level === 8) && fullyEvolved === false) {
+        if ((level === 15 || level === 30) && fullyEvolved === false) {
           let evolveId = null;
           let pokemons = await getAllPokemon();
           for (let i = 0; i < pokemons.length; i++) {
