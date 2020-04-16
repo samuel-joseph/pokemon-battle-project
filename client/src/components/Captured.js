@@ -14,28 +14,48 @@ class Captured extends Component {
     super(props);
     this.state = {
       pokemon: null,
-      totalPokemon: null,
+      userPokemon: null,
     };
   }
 
   componentDidMount = async () => {
-    console.log("AM I HERE");
-    let lastPokemon = await trainerPokemon();
-    let pokemon = lastPokemon.pop();
-    this.props.saySomething(`${pokemon.name} joined your team!`);
-    this.setState({ pokemon, totalPokemon: lastPokemon });
+    let pokemon = await trainerPokemon();
+    let userPokemon = pokemon.pop();
+    this.props.saySomething(`You've added a new pokemon into your team!`);
+    this.setState({ pokemon, userPokemon });
+  };
+
+  firstPokemon = (id) => {
+    const user = this.state.pokemon;
+    const userPokemon = user[id];
+    this.props.saySomething(
+      `${userPokemon.name} a ${userPokemon.type} type pokemon!`
+    );
+    this.setState({ userPokemon });
   };
 
   render() {
     return (
-      <div className="newPokemon">
+      <div>
         {this.state.pokemon && (
-          <div>
-            <img className="pokemon1" src={this.state.pokemon.frontImage} />
-
-            <Link className="register" to="/menu">
-              CONFIRM
-            </Link>
+          <div className="newPokemon">
+            <div>
+              <img
+                className="pokemon"
+                src={this.state.userPokemon.frontImage}
+              />
+            </div>
+            <div className="newPokemon1">
+              {this.state.pokemon.map((pokemon, index) => (
+                <img
+                  onClick={() => this.firstPokemon(index)}
+                  src={pokemon.frontImage}
+                />
+              ))}
+            </div>
+            <p className="tips">
+              Click the pokeball menu button to the right when you're ready!
+            </p>
           </div>
         )}
       </div>

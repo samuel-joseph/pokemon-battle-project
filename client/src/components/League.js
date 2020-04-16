@@ -11,6 +11,7 @@ import {
   newChampion,
   typeAdvantage,
   useAdvantage,
+  getAllTrainer,
 } from "../services/api_helper";
 
 import MaxHealthBar from "./maxHealthBar";
@@ -26,6 +27,7 @@ class League extends Component {
         image: null,
         message: null,
       },
+      introChamp: false,
       userWin: false,
       user: null,
       userHealed: null,
@@ -204,6 +206,7 @@ class League extends Component {
     const user = await trainerPokemon();
     const userHealed = user;
     const userPokemon = user[0];
+    console.log(userHealed);
     const userMoves = await getMoves(userPokemon.id);
     this.setState({ user, userHealed, userPokemon, userMoves, heal: 5 });
 
@@ -259,28 +262,29 @@ class League extends Component {
   };
 
   finalMatch = async (enemy) => {
-    // console.log(enemy);
-    // const npcContainer = enemy.shift();
     const npc = this.state.champion.pokemon;
-    // const name = npcContainer.name;
-    // const image = npcContainer.image;
-    // const message = npcContainer.message;
+    const user = this.state.userHealed;
+    const userPokemon = user[0];
+    const userMoves = await getMoves(userPokemon.id);
 
     const npcPokemon = npc.shift();
     const npcMoves = await getMoves(npcPokemon.id);
-    this.setState({
-      // currentNpc: {
-      //   name,
-      //   image,
-      //   message
-      // },
-      npc,
-      npcPokemon,
-      npcMoves,
-      battle: false,
-      isStart: true,
-      userWin: false,
-    });
+    setTimeout(
+      function () {
+        this.setState({ introChamp: false });
+        this.setState({
+          user,
+          userPokemon,
+          npc,
+          npcPokemon,
+          npcMoves,
+          battle: false,
+          isStart: true,
+          userWin: false,
+        });
+      }.bind(this),
+      7500
+    );
   };
 
   battleStart = async () => {
@@ -294,7 +298,6 @@ class League extends Component {
       this.newNpc(enemy);
     } else if (gymLeader.length === 0 && eliteFour.length !== 0) {
       enemy = eliteFour;
-      console.log("ELITE FOUR");
       this.newNpc(enemy);
     } else if (gymLeader.length === 0 && eliteFour.length === 0) {
       champ = await getChampion();
@@ -302,8 +305,7 @@ class League extends Component {
         this.state.champion.pokemon &&
         this.state.champion.pokemon.length !== 0
       ) {
-        // let pokemon = await ownedPokemon(champ.id);
-        // enemy = pokemon.data.pokemon;
+        this.setState({ introChamp: true });
         this.props.saySomething(
           `Behold the Pokemon Champion ${champ.username}! Is here!`
         );
@@ -407,6 +409,7 @@ class League extends Component {
   };
 
   battleSequence = async () => {
+    console.log(this.state.userHealed);
     this.setState({ battle: true });
     let typeUser = this.state.userPokemon.type;
     let typeNpc = this.state.npcPokemon.type;
@@ -685,6 +688,16 @@ class League extends Component {
   render() {
     return (
       <div className="league">
+        {this.state.introChamp && (
+          <div className="intro">
+            <img
+              className="introImg"
+              src="https://images.vexels.com/media/users/3/167800/isolated/preview/56e1ce3c2620450dbe33c185c751723a-king-sword-crown-mantle-silhouette-by-vexels.png"
+            />
+            <p>Champion is ready for you... Good luck!</p>
+          </div>
+        )}
+        <></>
         {!this.state.isStart && (
           <div className="league1">
             {this.state.ready && (
@@ -706,7 +719,7 @@ class League extends Component {
                 ) : (
                   <div className="opponent">
                     <img src={this.state.eliteFour[0].image} />
-                    <h5>{this.state.eliteFour[0].name}</h5>
+                    <h5 className="tips">{this.state.eliteFour[0].name}</h5>
                   </div>
                 )}
                 <div>
@@ -787,9 +800,11 @@ class League extends Component {
                       {this.state.npcPokemon.name}
                     </span>
                     <div className="hpBar">
-                      <MaxHealthBar
-                        percentage={this.state.npcPokemon.current_health}
-                      />
+                      {!this.state.introChamp && (
+                        <MaxHealthBar
+                          percentage={this.state.npcPokemon.current_health}
+                        />
+                      )}
                       <div>
                         {this.state.npcPokemon.current_health}/
                         {this.state.npcPokemon.health}
@@ -823,14 +838,16 @@ class League extends Component {
                   </div>
                 </div>
 
-                {!this.state.battle && (
-                  <button
-                    className="register1"
-                    onClick={() => this.battleSequence()}
-                  >
-                    FIGHT
-                  </button>
-                )}
+                <div className="space">
+                  {!this.state.battle && (
+                    <button
+                      className="register1"
+                      onClick={() => this.battleSequence()}
+                    >
+                      FIGHT
+                    </button>
+                  )}
+                </div>
                 <div>
                   <div className="userA">
                     <div className="testUser">
@@ -859,33 +876,41 @@ class League extends Component {
                           LV{this.state.userPokemon.level}
                           {this.state.userPokemon.name}
                         </span>
-                        <div className="hpBar">
-                          <MaxHealthBar
-                            percentage={this.state.userPokemon.current_health}
-                          />
-                          <div>
-                            {this.state.userPokemon.current_health}/
-                            {this.state.userPokemon.health}
-                          </div>
-                        </div>
+                        {!this.state.introChamp && (
+                          <>
+                            <div className="hpBar">
+                              <MaxHealthBar
+                                percentage={
+                                  this.state.userPokemon.current_health
+                                }
+                              />
+                              <div>
+                                {this.state.userPokemon.current_health}/
+                                {this.state.userPokemon.health}
+                              </div>
+                            </div>
+                          </>
+                        )}
                       </div>
                     )}
                   </div>
                 </div>
-                <div className="sparePokemons">
-                  {this.state.userPokemon.current_health > 0 && (
-                    <>
-                      {this.state.user.map((data, index) => (
-                        <div key={index}>
-                          <img
-                            onClick={() => this.change(data)}
-                            src={this.state.user[index].frontImage}
-                          />
-                        </div>
-                      ))}
-                    </>
-                  )}
-                </div>
+                {!this.state.introChamp && (
+                  <div className="sparePokemons">
+                    {this.state.userPokemon.current_health > 0 && (
+                      <>
+                        {this.state.user.map((data, index) => (
+                          <div key={index}>
+                            <img
+                              onClick={() => this.change(data)}
+                              src={this.state.user[index].frontImage}
+                            />
+                          </div>
+                        ))}
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>

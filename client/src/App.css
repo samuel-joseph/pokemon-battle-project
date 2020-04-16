@@ -7,6 +7,25 @@
   display: flex;
   flex-direction: column;
 }
+
+.newPokemon {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.newPokemon1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.space {
+  display: flex;
+  /* height: 2vh; */
+  justify-content: center;
+}
 .register {
   background-color: blue;
   color: white;
@@ -401,7 +420,7 @@ h4 {
 }
 
 .league {
-  background-image: linear-gradient(-125deg, red, black, blue);
+  background-image: linear-gradient(180deg, red, black, blue);
   height: 100%;
   overflow: scroll;
 }
@@ -429,7 +448,7 @@ h4 {
 }
 
 .userPokemon {
-  width: 50vw;
+  width: 70vw;
   animation-name: stallUser;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -444,7 +463,7 @@ h4 {
 } */
 
 .userPokemonFade {
-  width: 50vw;
+  width: 70vw;
   animation-name: fade;
   animation-delay: initial;
   animation-duration: 3s;
@@ -527,6 +546,45 @@ h4 {
   width: 50%;
 }
 
+.trophy {
+  width: 65vw;
+}
+
+.name {
+  font-weight: bold;
+  padding: 2vh 2vw;
+  background-color: gold;
+  opacity: 1;
+  color: black;
+  width: 100vw;
+}
+
+.champPokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.champImg {
+  width: 80vw;
+}
+
+.headChamp {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  width: 100vw;
+  padding: 2vh 2vw;
+  margin: 0 0;
+}
+
+.winner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .elite {
   display: flex;
   flex-direction: row;
@@ -589,12 +647,30 @@ h4 {
   animation-iteration-count: 1;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.castle {
+  width: 100%;
+  height: 100%;
+}
+
+.introImg {
+  width: 100%;
+}
+
 .capture {
   width: 8%;
 }
 
 .userMove {
-  width: 50vw;
+  width: 70vw;
   margin-left: -25%;
   animation-name: userAttack;
   animation-duration: 1s;
@@ -876,24 +952,22 @@ h4 {
     opacity: 0;
   }
 
-  20% {
-    /* transform: rotateZ(-15deg); */
-  }
-
-  22% {
+  25% {
+    width: 50vw;
     margin-left: 70%;
     margin-top: -100%;
-    opacity: 1;
     /* transform: rotateZ(15deg); */
   }
-  30% {
+  45% {
+    width: 50vw;
     margin-left: 150%;
     margin-top: -100%;
-    opacity: 0;
+    opacity: 1;
     transform: rotateZ(15deg);
   }
 
   50% {
+    /* width: 65vw; */
     margin-left: 50%;
     margin-top: -50%;
     opacity: 0.8;
@@ -901,12 +975,13 @@ h4 {
   }
   75% {
     margin-left: 15%;
+    opacity: 0;
     /* margin-top: -15%; */
   }
   100% {
     margin-left: 0%;
     margin-top: 0%;
-    opacity: 1;
+    /* opacity: 1; */
   }
 }
 

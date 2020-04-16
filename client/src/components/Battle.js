@@ -395,33 +395,48 @@ class Battle extends Component {
   };
 
   readyCatch = async () => {
-    let count = this.state.count;
-    count--;
-    this.setState({ catch: true, count });
-    const hp = this.state.npc.current_health;
-    const totalHp = this.state.fighterPokemon.health;
-    const chance = totalHp * 0.07;
-    const dice = totalHp * 0.07;
-    console.log();
-    // Math.floor(Math.random() * Math.floor(hp));
-    this.props.saySomething(
-      `Trainer ${localStorage.getItem("name")} throws a pokeball!`
-    );
-
-    setTimeout(
-      function () {
-        if (dice <= chance) {
-          this.props.saySomething(`You caught a ${this.state.npc.name}!`);
-          this.storePokemon();
-          this.setState({ battle: true, userPokemon: null });
-          this.props.history.push("/newPokemon");
-        } else {
-          this.props.saySomething("Your pokeball broke!");
+    let npcHp = this.state.npc.current_health;
+    let totalNpcHp = this.state.npc.health;
+    if (npcHp >= Math.floor(totalNpcHp / 2)) {
+      console.log("CHECK IF I AM HERE");
+      console.log(npcHp / 2);
+      let count = this.state.count;
+      count--;
+      this.setState({ catch: true, count });
+      setTimeout(
+        function () {
+          this.props.saySomething("Your pokeball broke! Too early!");
           this.setState({ catch: false });
-        }
-      }.bind(this),
-      2000
-    );
+        }.bind(this),
+        2000
+      );
+    } else {
+      let count = this.state.count;
+      count--;
+      this.setState({ catch: true, count });
+      const hp = this.state.npc.current_health;
+      const totalHp = this.state.npc.health;
+      const chance = totalHp * 0.07;
+      const dice = Math.floor(Math.random() * Math.floor(hp));
+      this.props.saySomething(
+        `Trainer ${localStorage.getItem("name")} throws a pokeball!`
+      );
+
+      setTimeout(
+        function () {
+          if (dice <= chance) {
+            this.props.saySomething(`You caught a ${this.state.npc.name}!`);
+            this.storePokemon();
+            this.setState({ battle: true, userPokemon: null });
+            this.props.history.push("/newPokemon");
+          } else {
+            this.props.saySomething("Your pokeball broke!");
+            this.setState({ catch: false });
+          }
+        }.bind(this),
+        2000
+      );
+    }
   };
 
   change = async (pokemon) => {
@@ -530,7 +545,7 @@ class Battle extends Component {
                                     }
                                     src={
                                       this.state.catch
-                                        ? "https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png"
+                                        ? "https://thumbs.gfycat.com/GenerousTimelyBrontosaurus-max-1mb.gif"
                                         : this.state.npc.frontImage
                                     }
                                   />

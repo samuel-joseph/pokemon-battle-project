@@ -10,17 +10,18 @@ class Outcomes extends Component {
 
   render() {
     return (
-      <div>
-        <h1>CONGRATULATIONS {localStorage.getItem("name")}</h1>
-        <p>
-          You are the new <h2>CHAMPION</h2>
-        </p>
-        {this.props.pokemon &&
-          this.props.pokemon.map(data => (
-            <span>
-              <img src={data.frontImage} />
-            </span>
-          ))}
+      <div className="winner">
+        <h1 className="headChamp">CONGRATULATIONS</h1>
+        <img className="trophy" src="https://i.gifer.com/6x6G.gif" />
+        <h1 className="name">CHAMPION {localStorage.getItem("name")}</h1>
+        <div className="champPokemon">
+          {this.props.pokemon &&
+            this.props.pokemon.map((data) => (
+              <>
+                <img className="champImg" src={data.frontImage} />
+              </>
+            ))}
+        </div>
       </div>
     );
   }

@@ -145,7 +145,9 @@ class Evolution extends Component {
               src={this.state.prevPokemon.frontImage}
             />
             {!this.state.isClick && (
-              <button onClick={() => this.evolve()}>PROCEED</button>
+              <button className="register" onClick={() => this.evolve()}>
+                PROCEED
+              </button>
             )}
             <div className={this.state.movesLoad ? "evolveMoves" : ""}>
               {this.state.movesLoad &&
