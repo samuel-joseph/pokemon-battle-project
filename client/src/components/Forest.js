@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, Route, withRouter } from "react-router-dom";
-import { getPokemon } from "../services/api_helper";
+import { getPokemon, trainerPokemon } from "../services/api_helper";
 
 import Battle from "./Battle";
 
@@ -16,20 +16,20 @@ class Forest extends Component {
           name: "Route 1-35",
           arrayPokemons: [
             19,
+            41,
+            39,
             16,
+            46,
+            54,
+            43,
             13,
+            50,
             21,
             23,
             27,
             29,
             32,
             37,
-            39,
-            41,
-            43,
-            46,
-            50,
-            54,
             58,
             60,
             63,
@@ -48,18 +48,19 @@ class Forest extends Component {
           image:
             "https://i.pinimg.com/originals/2a/a2/0b/2aa20b2129a6b56fd02eb2d794a1a689.png",
           name: "Route 36-75",
-          arrayPokemons: [25, 108, 26, 111, 106, 107, 134, 135, 136],
+          arrayPokemons: [108, 26, 111, 106, 107, 134, 135, 136, 25],
           rank: "high",
         },
         {
           image:
             "https://i.pinimg.com/originals/2a/a2/0b/2aa20b2129a6b56fd02eb2d794a1a689.png",
           name: "Route 75-100",
-          arrayPokemons: [24, 128, 124, 125, 126, 127, 124, 131, 142, 143, 115],
+          arrayPokemons: [24, 115, 124, 125, 126, 127, 124, 128, 131, 142, 143],
           rank: "high",
         },
       ],
       pokemons: [],
+      picked: null,
       chosenPokemon: null,
       isClicked: false,
       proceed: false,
@@ -80,8 +81,9 @@ class Forest extends Component {
   };
 
   forestPokemons = async (data) => {
-    console.log(data);
+    this.props.saySomething("WAIT FOR IT!!!");
     const id = data.arrayPokemons;
+    console.log(id.length);
     this.resetMap();
     for (let i = 0; i < id.length; i++) {
       const pokemons = await getPokemon(id[i]);
@@ -90,14 +92,27 @@ class Forest extends Component {
         isClicked: true,
       });
     }
+
+    this.props.saySomething("Try Hunting NOW!");
+
     this.setState({ rank: data.rank });
   };
 
-  battle = () => {
-    const arrayPokemons = this.state.pokemons;
-    const chosenPokemon = this.state.pokemons[
-      Math.floor(Math.random() * Math.floor(arrayPokemons.length - 1))
-    ];
+  battle = async () => {
+    let resp = await trainerPokemon();
+    let level = resp.pop().level;
+    let arrayPokemons = this.state.pokemons;
+    let chance = Math.floor(arrayPokemons.length * 0.5);
+    if (level > 15) {
+      for (let i = 0; i < chance; i++) {
+        arrayPokemons.shift();
+      }
+    }
+    console.log(arrayPokemons);
+    const chosenPokemon =
+      arrayPokemons[
+        Math.floor(Math.random() * Math.floor(arrayPokemons.length - 1))
+      ];
 
     this.setState({ proceed: true, chosenPokemon });
   };

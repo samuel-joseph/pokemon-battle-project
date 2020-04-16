@@ -54,7 +54,7 @@ class Captured extends Component {
               ))}
             </div>
             <p className="tips">
-              Click the pokeball menu button to the right when you're ready!
+              Click the pokeball menu button to the left when you're ready!
             </p>
           </div>
         )}

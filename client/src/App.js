@@ -161,7 +161,7 @@ class App extends Component {
               <p className="title">POKEMON LEAGUE</p>
               <img
                 className="logout"
-                src="https://cdn2.iconfinder.com/data/icons/e-commerce-line-10-1/1024/logout10-512.png"
+                src="https://www.netclipart.com/pp/m/399-3996034_transparent-background-logout-icon-png.png"
                 onClick={() => this.handleLogout()}
               />
             </div>

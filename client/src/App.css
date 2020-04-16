@@ -178,6 +178,7 @@ p {
   width: 10vw;
 }
 
+
 .title {
   width: 70%;
   font-size: 20pt;
@@ -953,18 +954,18 @@ h4 {
     opacity: 0;
   }
 
-  25% {
+  22% {
     width: 50vw;
     margin-left: 70%;
     margin-top: -100%;
     /* transform: rotateZ(15deg); */
   }
-  45% {
+  33% {
     width: 50vw;
     margin-left: 150%;
     margin-top: -100%;
     opacity: 1;
-    transform: rotateZ(15deg);
+    transform: rotateZ(10deg);
   }
 
   50% {

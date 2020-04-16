@@ -507,7 +507,6 @@ class Battle extends Component {
               <>
                 {this.state.userPokemon && (
                   <div>
-                    {console.log(this.state.count)}
                     <div className="forestBat">
                       <div className="npc">
                         <div>
@@ -572,6 +571,11 @@ class Battle extends Component {
                               </button>
                             )}
                         </>
+                      )}
+                      {this.state.npc.current_health <= 0 && (
+                        <Link className="register" to="/menu">
+                          END
+                        </Link>
                       )}
                       <div>
                         <div className="userA">
