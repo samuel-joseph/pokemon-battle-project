@@ -75,8 +75,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/f/f6/Lets_Go_Pikachu_Eevee_Misty.png/183px-Lets_Go_Pikachu_Eevee_Misty.png",
-          // array: [120, 121],
-          array: [120],
+          array: [120, 121],
           pokemon: [],
         },
         {
@@ -84,8 +83,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/b/bc/Lets_Go_Pikachu_Eevee_Lt_Surge.png/216px-Lets_Go_Pikachu_Eevee_Lt_Surge.png",
-          // array: [25, 25, 26],
-          array: [120],
+          array: [25, 25, 26],
           pokemon: [],
         },
         {
@@ -93,8 +91,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://projectpokemon.org/home/uploads/monthly_2019_06/large.celadon-city-char-erika.png.723ad4918835af3cb562f78c11a971db.png",
-          // array: [114, 70, 71],
-          array: [120],
+          array: [114, 70, 71],
           pokemon: [],
         },
         {
@@ -102,8 +99,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/f/f4/Lets_Go_Pikachu_Eevee_Koga.png/225px-Lets_Go_Pikachu_Eevee_Koga.png",
-          // array: [109, 89, 109, 110],
-          array: [120],
+          array: [109, 89, 109, 110],
           pokemon: [],
         },
         {
@@ -111,8 +107,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/7/78/Lets_Go_Pikachu_Eevee_Sabrina.png/211px-Lets_Go_Pikachu_Eevee_Sabrina.png",
-          // array: [64, 122, 49, 65],
-          array: [120],
+          array: [64, 122, 49, 65],
           pokemon: [],
         },
         {
@@ -120,8 +115,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/c/c8/Lets_Go_Pikachu_Eevee_Blaine.png/216px-Lets_Go_Pikachu_Eevee_Blaine.png",
-          // array: [38, 78, 59, 126],
-          array: [120],
+          array: [38, 78, 59, 126],
           pokemon: [],
         },
         {
@@ -129,8 +123,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://gamepedia.cursecdn.com/wiki_marriland/f/f2/Giovanni.png",
-          // array: [53, 111, 112, 115, 31],
-          array: [120],
+          array: [53, 111, 112, 115, 31],
           pokemon: [],
         },
       ],
@@ -140,8 +133,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/f/f7/Lets_Go_Pikachu_Eevee_Lorelei.png/162px-Lets_Go_Pikachu_Eevee_Lorelei.png",
-          // array: [87, 124, 91, 80, 131],
-          array: [120],
+          array: [87, 124, 91, 80, 131],
           pokemon: [],
         },
         {
@@ -149,8 +141,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://cdn.bulbagarden.net/upload/thumb/4/4c/Lets_Go_Pikachu_Eevee_Bruno.png/200px-Lets_Go_Pikachu_Eevee_Bruno.png",
-          // array: [95, 106, 95, 107, 68],
-          array: [120],
+          array: [95, 106, 95, 107, 68],
           pokemon: [],
         },
         {
@@ -158,8 +149,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://vignette.wikia.nocookie.net/pokemon/images/c/c9/Agatha_Lets_Go_Pikachu_Eevee.png/revision/latest?cb=20181120184616",
-          // array: [93, 42, 93, 24, 94],
-          array: [120],
+          array: [93, 42, 93, 24, 94],
           pokemon: [],
         },
         {
@@ -167,8 +157,7 @@ class League extends Component {
           message: "Good job trainer",
           image:
             "https://vignette.wikia.nocookie.net/vsbattles/images/f/f5/HeartGold_SoulSilver_Lance.png/revision/latest/scale-to-width-down/340?cb=20161217185553",
-          // array: [130, 148, 142, 148, 149],
-          array: [120],
+          array: [130, 148, 142, 148, 149],
           pokemon: [],
         },
       ],

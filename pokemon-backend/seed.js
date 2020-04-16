@@ -385,9 +385,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
-    health: 370,
-    current_health: 370,
-    level: 1,
+    health: 350,
+    current_health: 350,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -400,8 +400,8 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/26.png",
-    health: 370,
-    current_health: 370,
+    health: 375,
+    current_health: 375,
     level: 30,
     total_experience: 300,
     current_experience: 0,
@@ -1855,8 +1855,8 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/123.png",
-    health: 380,
-    current_health: 380,
+    health: 360,
+    current_health: 360,
     level: 30,
     total_experience: 300,
     current_experience: 0,
@@ -1871,7 +1871,7 @@ const main = async () => {
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/124.png",
     health: 350,
-    current_health: 300,
+    current_health: 350,
     level: 30,
     total_experience: 300,
     current_experience: 0,
@@ -1930,8 +1930,8 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/128.png",
-    health: 350,
-    current_health: 350,
+    health: 380,
+    current_health: 380,
     level: 30,
     total_experience: 300,
     current_experience: 0,
@@ -1960,9 +1960,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/130.png",
-    health: 420,
-    current_health: 420,
-    level: 30,
+    health: 360,
+    current_health: 360,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: true,
@@ -2230,9 +2230,9 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/148.png",
-    health: 350,
-    current_health: 380,
-    level: 30,
+    health: 330,
+    current_health: 330,
+    level: 15,
     total_experience: 300,
     current_experience: 0,
     fullyEvolved: false,
@@ -2245,8 +2245,8 @@ const main = async () => {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
     backImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/149.png",
-    health: 480,
-    current_health: 300,
+    health: 400,
+    current_health: 400,
     level: 30,
     total_experience: 300,
     current_experience: 0,
@@ -2506,7 +2506,7 @@ const main = async () => {
     const w = await Move.create({
       name: "Wing Attack",
       attack: 60,
-      animation: "https://media2.giphy.com/media/ecwugA7BhePPq/source.gif",
+      animation: "https://i.gifer.com/Yrhh.gif",
       type: "Flying",
     });
 
@@ -2574,14 +2574,21 @@ const main = async () => {
   const solarBeam = await Move.create({
     name: "Solar Beam",
     attack: 120,
-    animation: "https://thumbs.gfycat.com/ColorlessAcceptableEider-max-1mb.gif",
+    animation: "https://media3.giphy.com/media/11XU8sAwhvwjok/source.gif",
     type: "Grass",
   });
 
   const solarBeam1 = await Move.create({
     name: "Solar Beam",
     attack: 120,
-    animation: "https://thumbs.gfycat.com/ColorlessAcceptableEider-max-1mb.gif",
+    animation: "https://media3.giphy.com/media/11XU8sAwhvwjok/source.gif",
+    type: "Grass",
+  });
+
+  const solarBeam2 = await Move.create({
+    name: "Solar Beam",
+    attack: 120,
+    animation: "https://media3.giphy.com/media/11XU8sAwhvwjok/source.gif",
     type: "Grass",
   });
 
@@ -2594,6 +2601,14 @@ const main = async () => {
   });
 
   const hydroPump1 = await Move.create({
+    name: "Hydro Pump",
+    attack: 120,
+    animation:
+      "https://gifimage.net/wp-content/uploads/2018/10/aura-gif-transparent-6.gif",
+    type: "Water",
+  });
+
+  const hydroPump2 = await Move.create({
     name: "Hydro Pump",
     attack: 120,
     animation:
@@ -2833,6 +2848,22 @@ const main = async () => {
     type: "Electric",
   });
 
+  const thunderPunch5 = await Move.create({
+    name: "Thunder Punch",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
+    type: "Electric",
+  });
+
+  const thunderPunch6 = await Move.create({
+    name: "Thunder Punch",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/93f1b9a2daec43c858e53c182ea1c85a_blast-vector-gif-animation-transparent-png-clipart-free-download-_933-633.gif",
+    type: "Electric",
+  });
+
   const highJumpKick = await Move.create({
     name: "High Jump Kick",
     attack: 90,
@@ -2892,8 +2923,7 @@ const main = async () => {
   const slash = await Move.create({
     name: "Slash",
     attack: 90,
-    animation:
-      "https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gifv",
+    animation: "https://i.ya-webdesign.com/images/slash-effect-png-9.png",
     type: "Normal",
   });
 
@@ -2948,40 +2978,35 @@ const main = async () => {
   const gust = await Move.create({
     name: "Gust",
     attack: 65,
-    animation:
-      "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+    animation: "https://thumbs.gfycat.com/RaggedMixedBlackfly-max-1mb.gif",
     type: "Flying",
   });
 
   const gust1 = await Move.create({
     name: "Gust",
     attack: 65,
-    animation:
-      "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+    animation: "https://thumbs.gfycat.com/RaggedMixedBlackfly-max-1mb.gif",
     type: "Flying",
   });
 
   const gust2 = await Move.create({
     name: "Gust",
     attack: 65,
-    animation:
-      "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+    animation: "https://thumbs.gfycat.com/RaggedMixedBlackfly-max-1mb.gif",
     type: "Flying",
   });
 
   const gust3 = await Move.create({
     name: "Gust",
     attack: 65,
-    animation:
-      "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+    animation: "https://thumbs.gfycat.com/RaggedMixedBlackfly-max-1mb.gif",
     type: "Flying",
   });
 
   const gust4 = await Move.create({
     name: "Gust",
     attack: 50,
-    animation:
-      "https://thumbs.gfycat.com/PlumpKnobbyArmednylonshrimp-size_restricted.gif",
+    animation: "https://thumbs.gfycat.com/RaggedMixedBlackfly-max-1mb.gif",
     type: "Flying",
   });
 
@@ -3008,7 +3033,7 @@ const main = async () => {
   });
 
   const mudSlap1 = await Move.create({
-    name: "Earth Quake",
+    name: "Mud Slap",
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
@@ -3016,7 +3041,7 @@ const main = async () => {
   });
 
   const mudSlap2 = await Move.create({
-    name: "Earth Quake",
+    name: "Mud Slap",
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
@@ -3024,7 +3049,7 @@ const main = async () => {
   });
 
   const mudSlap3 = await Move.create({
-    name: "Earth Quake",
+    name: "Mud Slap",
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
@@ -3032,7 +3057,47 @@ const main = async () => {
   });
 
   const mudSlap4 = await Move.create({
-    name: "Earth Quake",
+    name: "Mud Slap",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
+    type: "Ground",
+  });
+
+  const mudSlap5 = await Move.create({
+    name: "Mud Slap",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
+    type: "Ground",
+  });
+
+  const mudSlap6 = await Move.create({
+    name: "Mud Slap",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
+    type: "Ground",
+  });
+
+  const mudSlap7 = await Move.create({
+    name: "Mud Slap",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
+    type: "Ground",
+  });
+
+  const mudSlap8 = await Move.create({
+    name: "Mud Slap",
+    attack: 55,
+    animation:
+      "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
+    type: "Ground",
+  });
+
+  const mudSlap9 = await Move.create({
+    name: "Mud Slap",
     attack: 55,
     animation:
       "https://cdn.clipart.email/6509a46f26db40f00ce876df17758083_free-png-mud-transparent-mudpng-images-pluspng_299-243.png",
@@ -3347,7 +3412,22 @@ const main = async () => {
     type: "Grass",
   });
 
+  const leafBlade1 = await Move.create({
+    name: "Leaf Blade",
+    attack: 90,
+    animation: "https://i.ya-webdesign.com/images/transparent-laser-shot-6.gif",
+    type: "Grass",
+  });
+
   const xScissor = await Move.create({
+    name: "X-Scissor",
+    attack: 90,
+    animation:
+      "https://images.vexels.com/media/users/3/155299/isolated/preview/1988d1faba4d059eb4461d955af5cf61-x-mark-scribble-by-vexels.png",
+    type: "Bug",
+  });
+
+  const xScissor1 = await Move.create({
     name: "X-Scissor",
     attack: 90,
     animation:
@@ -3490,6 +3570,7 @@ const main = async () => {
   await pokemon130.addMove(surf[7]);
   await pokemon130.addMove(takeDown[0]);
   await pokemon130.addMove(hyperBeam);
+  await pokemon130.addMove(hydroPump2);
 
   await pokemon131.addMove(tackle[30]);
   await pokemon131.addMove(waterGun[19]);
@@ -3536,7 +3617,7 @@ const main = async () => {
   await pokemon17.addMove(tackle[42]);
   await pokemon17.addMove(gust1);
 
-  await pokemon18.addMove(tackle[43]);
+  await pokemon18.addMove(quickAttack[46]);
   await pokemon18.addMove(gust2);
   await pokemon18.addMove(wingAttack);
 
@@ -3561,6 +3642,7 @@ const main = async () => {
   await pokemon25.addMove(quickAttack[7]);
   await pokemon25.addMove(thunder);
   await pokemon25.addMove(thunderBolt[0]);
+  await pokemon25.addMove(swift[10]);
 
   await pokemon26.addMove(quickAttack[8]);
   await pokemon26.addMove(thunderBolt[1]);
@@ -3574,25 +3656,30 @@ const main = async () => {
   await pokemon28.addMove(earthQuake);
 
   await pokemon29.addMove(tackle[50]);
+  await pokemon29.addMove(mudSlap4);
 
   await pokemon30.addMove(tackle[51]);
   await pokemon30.addMove(toxic[2]);
+  await pokemon29.addMove(mudSlap5);
 
   await pokemon31.addMove(tackle[52]);
   await pokemon31.addMove(toxic[3]);
   await pokemon31.addMove(acid[3]);
   await pokemon31.addMove(earthQuake1);
-  await pokemon31.addMove(rockSlide7);
+  await pokemon31.addMove(rockSlide6);
 
   await pokemon32.addMove(tackle[55]);
+  await pokemon32.addMove(mudSlap7);
 
   await pokemon33.addMove(tackle[54]);
   await pokemon33.addMove(acid[4]);
+  await pokemon33.addMove(mudSlap8);
 
   await pokemon34.addMove(toxic[4]);
   await pokemon34.addMove(acid[5]);
   await pokemon34.addMove(earthQuake2);
   await pokemon34.addMove(rockSlide8);
+  await pokemon34.addMove(mudSlap9);
 
   await pokemon35.addMove(tackle[56]);
   await pokemon35.addMove(quickAttack[39]);
@@ -3631,6 +3718,7 @@ const main = async () => {
   await pokemon45.addMove(tackle[64]);
   await pokemon45.addMove(toxic[7]);
   await pokemon45.addMove(razorLeaf[3]);
+  await pokemon45.addMove(solarBeam2);
 
   await pokemon46.addMove(tackle[65]);
 
@@ -3706,6 +3794,7 @@ const main = async () => {
   await pokemon71.addMove(vineWhip[4]);
   await pokemon71.addMove(toxic[9]);
   await pokemon71.addMove(razorLeaf[5]);
+  await pokemon71.addMove(leafBlade1);
 
   await pokemon74.addMove(rockThrow[19]);
 
@@ -3767,13 +3856,14 @@ const main = async () => {
   await pokemon93.addMove(acid[12]);
   await pokemon94.addMove(shadowBall1);
   await pokemon94.addMove(nightShade);
-  await pokemon94.addMove(thunderPunch4);
+  await pokemon94.addMove(thunderPunch6);
   await pokemon94.addMove(dreamEater);
 
   await pokemon95.addMove(tackle[100]);
   await pokemon95.addMove(rockSlide3);
   await pokemon95.addMove(rockThrow[7]);
   await pokemon95.addMove(earthQuake7);
+  await pokemon95.addMove(mudSlap6);
 
   await pokemon96.addMove(tackle[101]);
   await pokemon96.addMove(confusion[3]);
@@ -3824,10 +3914,11 @@ const main = async () => {
   await pokemon111.addMove(tackle[114]);
   await pokemon111.addMove(rockThrow[8]);
 
-  await pokemon112.addMove(tackle[115]);
+  await pokemon112.addMove(stoneEdge3);
   await pokemon112.addMove(quickAttack[25]);
   await pokemon112.addMove(rockThrow[9]);
   await pokemon112.addMove(earthQuake3);
+  await pokemon112.addMove(thunderPunch5);
 
   await pokemon113.addMove(tackle[116]);
   await pokemon113.addMove(takeDown[8]);
@@ -3837,6 +3928,7 @@ const main = async () => {
   await pokemon114.addMove(razorLeaf[6]);
 
   await pokemon115.addMove(tackle[118]);
+  await pokemon115.addMove(takeDown[41]);
   await pokemon115.addMove(quickAttack[26]);
   await pokemon115.addMove(icePunch2);
 
@@ -3847,6 +3939,7 @@ const main = async () => {
   await pokemon123.addMove(quickAttack[27]);
   await pokemon123.addMove(wingAttack);
   await pokemon123.addMove(slash);
+  await pokemon123.addMove(xScissor1);
 
   await pokemon124.addMove(tackle[120]);
   await pokemon124.addMove(psywave[4]);
@@ -3867,6 +3960,7 @@ const main = async () => {
   await pokemon128.addMove(quickAttack[28]);
   await pokemon128.addMove(tackle[124]);
   await pokemon128.addMove(seismicToss2);
+  await pokemon128.addMove(thunderBolt[15]);
 
   await pokemon132.addMove(tackle[125]);
   await pokemon132.addMove(swift[8]);
@@ -3890,8 +3984,9 @@ const main = async () => {
   await pokemon142.addMove(tackle[130]);
   await pokemon142.addMove(wingAttack);
   await pokemon142.addMove(rockSlide5);
+  await pokemon142.addMove(stoneEdge2);
 
-  await pokemon143.addMove(tackle[131]);
+  await pokemon143.addMove(takeDown[40]);
   await pokemon143.addMove(quickAttack[32]);
   await pokemon143.addMove(seismicToss3);
   await pokemon143.addMove(earthQuake4);
@@ -3944,6 +4039,7 @@ const main = async () => {
   await pokemon448.addMove(boneRush);
   await pokemon448.addMove(rockSlide6);
   await pokemon448.addMove(icePunch5);
+  await pokemon448.addMove(stoneEdge4);
 
   await pokemon252.addMove(tackle[141]);
   await pokemon252.addMove(razorLeaf[15]);
