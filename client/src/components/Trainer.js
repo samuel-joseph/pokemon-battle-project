@@ -105,79 +105,81 @@ class Trainer extends Component {
 
   render() {
     return (
-      <div className="typeA">
-        <div className="trainerName">
-          <h1>TRAINER {localStorage.getItem("name")}</h1>
-        </div>
-        {this.state.pokemon && (
-          <div className="trainer">
-            <div className="trainerA">
-              {this.state.pokemon.map((data) => (
-                <div>
-                  <img
-                    className="trainerPokemon"
-                    src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png"
-                    onClick={() => this.showMoves(data)}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="moveContainer">
-              {this.state.showPokemon && (
-                <div className="specificPokemonA">
-                  <div className="specificPokemonB">
-                    <div className="levelName">
-                      <h4>{this.state.showPokemon.name}</h4>
-                      <p>Level {this.state.showPokemon.level}</p>
-                    </div>
-                    <img
-                      className="specificPokemon"
-                      src={this.state.showPokemon.frontImage}
-                    />
-                    <div className="pokemonDetails">
-                      <div>Type: {this.state.showPokemon.type}</div>
-                      <div>
-                        HP {this.state.showPokemon.current_health} /
-                        {this.state.showPokemon.health}
-                      </div>
-                      <div>
-                        XP {this.state.showPokemon.current_experience} /{" "}
-                        {this.state.showPokemon.total_experience}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div class="movesets">
-                <h4>MOVES</h4>
-                {this.state.moves && (
+      <div className="pcA">
+        <div className="typeA">
+          <div className="trainerName">
+            <h1>TRAINER {localStorage.getItem("name")}</h1>
+          </div>
+          {this.state.pokemon && (
+            <div className="trainer">
+              <div className="trainerA">
+                {this.state.pokemon.map((data) => (
                   <div>
-                    {this.state.moves.map((data, index) => (
-                      <div key={index}>
-                        <div>
-                          {data.name}:{data.attack}
-                        </div>
-                        {this.state.moves.length > 4 && (
-                          <button onClick={(e) => this.delete(index, data)}>
-                            DEL
-                          </button>
-                        )}
+                    <img
+                      className="trainerPokemon"
+                      src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png"
+                      onClick={() => this.showMoves(data)}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="moveContainer">
+                {this.state.showPokemon && (
+                  <div className="specificPokemonA">
+                    <div className="specificPokemonB">
+                      <div className="levelName">
+                        <h4>{this.state.showPokemon.name}</h4>
+                        <p>Level {this.state.showPokemon.level}</p>
                       </div>
-                    ))}
+                      <img
+                        className="specificPokemon"
+                        src={this.state.showPokemon.frontImage}
+                      />
+                      <div className="pokemonDetails">
+                        <div>Type: {this.state.showPokemon.type}</div>
+                        <div>
+                          HP {this.state.showPokemon.current_health} /
+                          {this.state.showPokemon.health}
+                        </div>
+                        <div>
+                          XP {this.state.showPokemon.current_experience} /{" "}
+                          {this.state.showPokemon.total_experience}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
+                <div class="movesets">
+                  <h4>MOVES</h4>
+                  {this.state.moves && (
+                    <div>
+                      {this.state.moves.map((data, index) => (
+                        <div key={index}>
+                          <div>
+                            {data.name}:{data.attack}
+                          </div>
+                          {this.state.moves.length > 4 && (
+                            <button onClick={(e) => this.delete(index, data)}>
+                              DEL
+                            </button>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                {this.state.isClicked && (
+                  <button
+                    className="register"
+                    onClick={() => this.isFree(this.state.showPokemon)}
+                  >
+                    free
+                  </button>
+                )}
               </div>
-              {this.state.isClicked && (
-                <button
-                  className="register"
-                  onClick={() => this.isFree(this.state.showPokemon)}
-                >
-                  free
-                </button>
-              )}
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     );
   }

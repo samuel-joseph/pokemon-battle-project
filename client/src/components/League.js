@@ -802,6 +802,7 @@ class League extends Component {
                         {this.state.npc.map((data, index) => (
                           <div key={index}>
                             <img
+                              className="gymBall"
                               onClick={() => this.change(data)}
                               src="https://i.ya-webdesign.com/images/pokeball-pixel-png-2.png"
                             />

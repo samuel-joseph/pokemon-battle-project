@@ -1,11 +1,13 @@
 .App {
   text-align: center;
-  margin-top: 15%;
 }
 
 .opening {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: scroll;
+  margin-bottom: 1000px;
 }
 
 .newPokemon {
@@ -63,6 +65,7 @@
 .buttonsOpenning {
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -171,16 +174,11 @@ p {
   margin-bottom: 100vh;
   padding-top: 2vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .home {
   width: 10vw;
-}
-
-.title {
-  width: 70%;
-  font-size: 20pt;
 }
 
 .logout {
@@ -963,15 +961,14 @@ h4 {
     width: 50vw;
     margin-left: 150%;
     margin-top: -100%;
-    opacity: 0.5;
-    transform: rotateZ(20deg);
+    opacity: 1;
+    transform: rotateZ(10deg);
   }
   50% {
     /* width: 65vw; */
-    margin-left: 150%;
+    margin-left: 70%;
     margin-top: -100%;
-    width: 50vw;
-    opacity: 1;
+    opacity: 0.8;
     transform: rotateZ(0deg);
   }
 
@@ -995,8 +992,176 @@ h4 {
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .main {
+@media (min-width: 600px) {
+  .App {
     background-color: black;
+  }
+  .header {
+    background-color: white;
+    border: solid red;
+    margin-bottom: 0;
+    justify-content: space-evenly;
+  }
+  .home {
+    width: 7vw;
+  }
+  .logout {
+    width: 7vw;
+  }
+  .title {
+    font-size: 36pt;
+  }
+
+  .choose {
+    width: 100vw;
+  }
+
+  .pokemon {
+    width: 15vw;
+  }
+
+  .pokeball {
+    width: 5vw;
+  }
+  .register {
+    padding: 25px 25px;
+  }
+
+  .main {
+    height: 75vh;
+  }
+
+  .menuButton {
+    height: 20vh;
+  }
+
+  .menu {
+    height: 100vh;
+    padding-top: 0;
+    border: solid red;
+    background-color: black;
+  }
+
+  .grass {
+    width: 5vw;
+    height: 10vh;
+  }
+  .grassImg {
+    width: 10vw;
+  }
+
+  .trainerPokemon {
+    width: 10vw;
+  }
+
+  .moveContainer {
+    width: 50vw;
+  }
+
+  .sparePokemons {
+    height: 15vh;
+    padding-top: 0;
+    position: none;
+    align-items: center;
+    margin-bottom: 80px;
+    background-color: burlywood;
+  }
+
+  .forestBat {
+  }
+
+  .npcPokemon {
+    width: 20vw;
+  }
+
+  .npcMove {
+    width: 20vw;
+  }
+
+  .userPokemon {
+    width: 25vw;
+  }
+
+  .userPokemonFade {
+    width: 25vw;
+  }
+
+  .npcPokemonFade {
+    width: 25vw;
+  }
+
+  .userMove {
+    width: 25vw;
+  }
+
+  .register1 {
+    padding: 25px 25px;
+  }
+
+  .userFX {
+    width: 30vw;
+  }
+
+  .npcFX {
+    width: 30vw;
+  }
+
+  .pokeAtCenter {
+    width: 18vw;
+  }
+
+  .loading {
+    width: 10vw;
+  }
+
+  .gymBall {
+    width: 3vw;
+  }
+
+  @keyframes userAttack {
+    0% {
+      margin-right: 0%;
+      opacity: 0;
+    }
+
+    15% {
+      width: 25vw;
+      margin-left: 70%;
+      margin-top: -20%;
+      /* transform: rotateZ(15deg); */
+    }
+    20% {
+      width: 25vw;
+      margin-left: 150%;
+      margin-top: -30%;
+      opacity: 1;
+      transform: rotateZ(10deg);
+    }
+    50% {
+      /* width: 65vw; */
+      margin-left: 70%;
+      margin-top: -30%;
+      opacity: 0.8;
+      transform: rotateZ(0deg);
+    }
+
+    70% {
+      /* width: 65vw; */
+      margin-left: 50%;
+      margin-top: -10%;
+      opacity: 0.8;
+      transform: rotateZ(0deg);
+    }
+
+    75% {
+      margin-left: 15%;
+      opacity: 0;
+      /* margin-top: -15%; */
+    }
+    100% {
+      margin-left: 0%;
+      margin-top: 0%;
+      /* opacity: 1; */
+    }
   }
 }

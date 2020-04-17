@@ -122,7 +122,7 @@ class App extends Component {
         <div>
           {!this.state.currentUser && (
             <div className="opening">
-              <h2 className="title">POKEMON LEAGUE</h2>
+              {/* <h2 className="title">POKEMON LEAGUE</h2> */}
               <div className="buttonsOpenning">
                 <Link className="register" to="/users/register">
                   REGISTER
@@ -155,13 +155,13 @@ class App extends Component {
             <div className="header">
               <img
                 className="home"
-                src="https://www.nicepng.com/png/detail/15-158271_pokeball-icon.png"
+                src="https://cdn2.iconfinder.com/data/icons/pokemon-filledoutline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png"
                 onClick={() => this.handleMenu()}
               />
               <p className="title">POKEMON LEAGUE</p>
               <img
                 className="logout"
-                src="https://www.netclipart.com/pp/m/399-3996034_transparent-background-logout-icon-png.png"
+                src="https://i.dlpng.com/static/png/6715368_preview.png"
                 onClick={() => this.handleLogout()}
               />
             </div>
