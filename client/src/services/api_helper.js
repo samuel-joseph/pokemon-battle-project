@@ -41,8 +41,8 @@ export const newChampion = async (id, postData) => {
 };
 
 export const getAllTrainer = async () => {
-  const resp = await api.post("/users/all");
-  return resp;
+  const resp = await api.get("/users/all");
+  return resp.data;
 };
 
 export const verifyUser = () => {

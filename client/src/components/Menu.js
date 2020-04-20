@@ -52,6 +52,9 @@ export default class Menu extends Component {
         <Link className="menuButton" to="/pokecenter">
           POKECENTER
         </Link>
+        {/* <Link className="menuButton" to="/pvp">
+          PVP
+        </Link> */}
         <Link className="menuButton" to="/league">
           LEAGUE
         </Link>

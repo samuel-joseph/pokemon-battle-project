@@ -14,6 +14,7 @@ import { IoMdLogOut } from "react-icons/fa";
 
 import Forest from "./components/Forest";
 import Pokedex from "./components/Pokedex";
+import Pvp from "./components/Pvp";
 import RegisterForm from "./components/RegisterForm";
 import LoginForm from "./components/LoginForm";
 import StartGame from "./components/StartGame";
@@ -161,7 +162,7 @@ class App extends Component {
               <p className="title">POKEMON LEAGUE</p>
               <img
                 className="logout"
-                src="https://i.dlpng.com/static/png/6715368_preview.png"
+                src="https://static.thenounproject.com/png/639965-200.png"
                 onClick={() => this.handleLogout()}
               />
             </div>
@@ -169,6 +170,10 @@ class App extends Component {
         </div>
 
         <div className="main">
+          <Route
+            path="/pvp"
+            render={() => <Pvp saySomething={(e) => this.saySomething(e)} />}
+          />
           <Route
             path="/league"
             render={() => <League saySomething={(e) => this.saySomething(e)} />}
