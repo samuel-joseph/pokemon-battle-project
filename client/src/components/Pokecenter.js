@@ -41,48 +41,50 @@ class Pokecenter extends Component {
       };
       const regainHp = await update(id, passData);
     }
-    let postData = {
-      name: "Greninja",
-      frontImage:
-        "https://vignette.wikia.nocookie.net/pokemon/images/f/f7/Greninja-ash.gif/revision/latest/top-crop/width/220/height/220?cb=20170103171951",
-      backImage:
-        "https://vignette.wikia.nocookie.net/robloxpokemonbrickbronze/images/3/30/Ash-Greninja-back_SM.gif/revision/latest/top-crop/width/150/height/150?cb=20171206063137",
-      health: 380,
-      current_health: 380,
-      type: "Water",
-      level: 30,
-      current_experience: 0,
-      total_experience: 18000,
-      fullyEvolved: true,
-    };
+    // let postData = {
+    //   name: "Greninja",
+    //   frontImage:
+    //     "https://vignette.wikia.nocookie.net/pokemon/images/f/f7/Greninja-ash.gif/revision/latest/top-crop/width/220/height/220?cb=20170103171951",
+    //   backImage:
+    //     "https://vignette.wikia.nocookie.net/robloxpokemonbrickbronze/images/3/30/Ash-Greninja-back_SM.gif/revision/latest/top-crop/width/150/height/150?cb=20171206063137",
+    //   health: 380,
+    //   current_health: 380,
+    //   type: "Water",
+    //   level: 30,
+    //   current_experience: 0,
+    //   total_experience: 18000,
+    //   fullyEvolved: true,
+    // };
 
-    const moveData = {
-      name: "Water Shuriken",
-      attack: "120",
-      animation:
-        "https://lh3.googleusercontent.com/proxy/gZ5Q0FFCEii9U-jES1N9NYZUMVeXebNZ-nM6GvNLC2pwKlPM_YcaDSVmayKnlIL4OeHIO-CjchQWTesyYYCtQJa7zKjeEvT8",
-      type: "Water",
-    };
+    // const moveData = {
+    //   name: "Water Shuriken",
+    //   attack: "120",
+    //   animation: "https://lh3.googleusercontent.com/proxy/gZ5Q0FFCEii9U-jES1N9NYZUMVeXebNZ-nM6GvNLC2pwKlPM_YcaDSVmayKnlIL4OeHIO-CjchQWTesyYYCtQJa7zKjeEvT8",
+    //   type: "Water",
+    // };
 
-    const moveData1 = {
-      name: "Cut",
-      attack: "100",
-      animation:
-        "https://images.vexels.com/media/users/3/155299/isolated/preview/1988d1faba4d059eb4461d955af5cf61-x-mark-scribble-by-vexels.png",
-      type: "Normal",
-    };
+    // const moveData1 = {
+    //   name: "Cut",
+    //   attack: "100",
+    //   animation: "https://images.vexels.com/media/users/3/155299/isolated/preview/1988d1faba4d059eb4461d955af5cf61-x-mark-scribble-by-vexels.png",
+    //   type: "Normal",
+    // };
 
-    const moveData2 = {
-      name: "Air Slash",
-      attack: "100",
-      animation: "https://i.ya-webdesign.com/images/slash-effect-png-9.png",
-      type: "Flying",
-    };
+    // const moveData2 = {
+    //   name: "Air Slash",
+    //   attack: "100",
+    //   animation: "https://i.ya-webdesign.com/images/slash-effect-png-9.png",
+    //   type: "Normal",
+    // };
 
+    // const moveData3 = {
+    //   name: "Air Slash",
+    //   attack: "100",
+    //   animation: "https://i.ya-webdesign.com/images/slash-effect-png-9.png",
+    //   type: "Normal",
+    // };
     // const resp = await storePokemon(postData);
-    // const move = await addMoves(resp.data.id, moveData);
-    // const move1 = await addMoves(resp.data.id, moveData1);
-    // const move2 = await addMoves(resp.data.id, moveData2);
+    // const move = await addMoves(220);
     // console.log(resp);
     this.setState({ isClicked: true });
   };
