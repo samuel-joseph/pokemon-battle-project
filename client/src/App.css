@@ -1124,23 +1124,23 @@ h4 {
       opacity: 0;
     }
 
-    15% {
+    10% {
       width: 25vw;
       margin-left: 70%;
-      margin-top: -20%;
+      margin-top: -25%;
       /* transform: rotateZ(15deg); */
     }
-    20% {
+    25% {
       width: 25vw;
-      margin-left: 150%;
-      margin-top: -30%;
+      margin-left: 100%;
+      margin-top: -40%;
       opacity: 1;
       transform: rotateZ(10deg);
     }
     50% {
       /* width: 65vw; */
       margin-left: 70%;
-      margin-top: -30%;
+      margin-top: -40%;
       opacity: 0.8;
       transform: rotateZ(0deg);
     }
