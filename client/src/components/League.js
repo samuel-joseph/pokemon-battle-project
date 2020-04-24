@@ -225,7 +225,7 @@ class League extends Component {
 
   newNpc = async (enemy) => {
     const user = this.state.userHealed;
-    const userPokemon = this.state.user[0];
+    const userPokemon = this.state.userPokemon;
     const userMoves = await getMoves(userPokemon.id);
     this.setState({ user, userMoves });
     const npcContainer = enemy.shift();
