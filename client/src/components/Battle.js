@@ -66,7 +66,6 @@ class Battle extends Component {
     const fighterPokemon = userPokemon[0];
     const npcAttack = await getMoves(npc.id);
     const userPokemonAttacks = await getMoves(fighterPokemon.id);
-    console.log(userPokemonAttacks);
     const name = npc.name;
     const current_experience = npc.current_experience;
     const total_experience = npc.total_experience;
@@ -85,7 +84,6 @@ class Battle extends Component {
     } else {
       count = 0;
     }
-    console.log(count);
 
     this.setState({
       count,
@@ -209,7 +207,6 @@ class Battle extends Component {
       current_health: health,
       total_experience,
     };
-    console.log(passData);
     const resp = await update(id, passData);
   };
 
