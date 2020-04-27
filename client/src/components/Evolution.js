@@ -26,7 +26,7 @@ class Evolution extends Component {
   }
 
   componentDidMount = async () => {
-    console.log("AM I HERE");
+    
     let prevPokemon = this.props.pokemon;
     this.props.saySomething(`Your ${prevPokemon.name} is about to evolve!!!`);
     let num = prevPokemon.frontImage.match(/\d+/g).map(Number);
@@ -52,7 +52,6 @@ class Evolution extends Component {
       testMoves.push(resp[i]);
       this.newMoves(resp[i], id);
     }
-    console.log(testMoves);
 
     const passData = {
       name,
@@ -110,7 +109,6 @@ class Evolution extends Component {
   };
 
   delete = async (index, move) => {
-    console.log(move);
     let id = this.props.pokemon.id;
     let moves = this.state.moves;
     moves.splice(index, 1);
@@ -135,11 +133,9 @@ class Evolution extends Component {
       <div>
         {this.state.pokemon && (
           <div className="evolveContainer">
-            {/* {this.state.testMoves && <>{console.log(this.state.testMoves)}</>} */}
             {this.state.isClick && (
               <img className="evolved" src={this.state.pokemon.frontImage} />
             )}
-            {console.log(this.state.moves)}
             <img
               className={this.state.isClick ? "faded" : "prevPokemon"}
               src={this.state.prevPokemon.frontImage}

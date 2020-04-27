@@ -94,7 +94,6 @@ class Forest extends Component {
     this.props.saySomething(
       " Choose any of the forest then press HUNT button to either catch a pokemon or just battle! HAPPY HUNTING!"
     );
-    console.log(this.state.win);
   };
 
   resetMap = () => {
@@ -105,7 +104,6 @@ class Forest extends Component {
   forestPokemons = async (data) => {
     this.props.saySomething("WAIT FOR IT!!!");
     const id = data.arrayPokemons;
-    console.log(id.length);
     this.resetMap();
     for (let i = 0; i < id.length; i++) {
       const pokemons = await getPokemon(id[i]);
@@ -130,7 +128,6 @@ class Forest extends Component {
         arrayPokemons.shift();
       }
     }
-    console.log(arrayPokemons);
     const chosenPokemon =
       arrayPokemons[
         Math.floor(Math.random() * Math.floor(arrayPokemons.length - 1))
