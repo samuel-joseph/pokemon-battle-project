@@ -238,7 +238,6 @@ class Battle extends Component {
     let randomUserAttack = this.randomFunc(
       useAdvantage(this.state.userPokemonAttacks, typeNpc)
     );
-    console.log(this.state.userPokemonAttacks);
 
     let userHealth = this.state.fighterPokemon.current_health;
     let userAdvantage = typeAdvantage(
@@ -251,7 +250,6 @@ class Battle extends Component {
         userAdvantage
     );
     let userAnimation = randomUserAttack.animation;
-    console.log(this.state.userPokemonAttacks);
 
     let effective = "";
     if (userAdvantage === 2) effective = "SUPER EFFECTIVE";
@@ -269,7 +267,6 @@ class Battle extends Component {
     npcHealth = npcHealth - userAttack;
     userHealth = userHealth - npcAttack;
 
-    console.log(npcHealth);
     setTimeout(
       function () {
         this.setState({ userAnimation: null, userTurn: false });
@@ -395,8 +392,6 @@ class Battle extends Component {
     let npcHp = this.state.npc.current_health;
     let totalNpcHp = this.state.npc.health;
     if (npcHp >= Math.floor(totalNpcHp / 2)) {
-      console.log("CHECK IF I AM HERE");
-      console.log(npcHp / 2);
       let count = this.state.count;
       count--;
       this.setState({ catch: true, count });
@@ -437,7 +432,6 @@ class Battle extends Component {
   };
 
   change = async (pokemon) => {
-    console.log(this.state.formData);
     const fighterPokemonID = this.state.fighterPokemon.id;
     const formData = this.state.formData;
     const id = pokemon.id;

@@ -57,18 +57,15 @@ class ChooseStarter extends Component {
       let index = Math.floor(Math.random() * Math.floor(num.length));
       id.push(num.splice(index, 1));
     }
-    console.log(id);
 
     for (let i = 0; i < 3; i++) {
       const resp = await getPokemon(id[i]);
       const resp1 = await getMoves(id[i]);
-      console.log(resp1);
       starters.push(resp);
       starterMoves.push(resp1);
     }
     const riolu = await getPokemon(152);
     const rioluMoves = await getMoves(152);
-    console.log(starters);
     this.props.saySomething("Choose a starter pokemon");
     this.setState({ starters, starterMoves, riolu, rioluMoves });
   };
