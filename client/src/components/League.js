@@ -496,8 +496,6 @@ class League extends Component {
             this.battleStart();
           } else {
             const user = this.state.userHealed;
-            console.log("THIS IS USERHEALED!");
-            console.log(user);
             this.setState({
               userWin: true,
               npcPokemon: null,
@@ -692,8 +690,6 @@ class League extends Component {
                     onClick={() => this.battleStart()}
                   >
                     PROCEED
-                    {console.log("THIS IS USERHEALED!!!")}
-                    {console.log(this.state.userHealed)}
                   </button>
                 </div>
                 <div>
@@ -838,7 +834,6 @@ class League extends Component {
                     </div>
                     {this.state.userPokemon && (
                       <div className="userB">
-                        {console.log(this.state.userPokemon)}
                         <span>
                           LV{this.state.userPokemon.level}
                           {this.state.userPokemon.name}

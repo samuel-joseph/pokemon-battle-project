@@ -30,7 +30,6 @@ class Trainer extends Component {
   }
 
   componentDidMount = async () => {
-    console.log(localStorage.getItem("name"));
     const pokemon = await trainerPokemon();
     const moves = await getMoves(pokemon[0].id);
     if (pokemon.length === 0) {
