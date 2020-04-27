@@ -195,7 +195,6 @@ class League extends Component {
     const user = await trainerPokemon();
     const userHealed = user;
     const userPokemon = user[0];
-    console.log(userHealed);
     const userMoves = await getMoves(userPokemon.id);
     this.setState({ user, userHealed, userPokemon, userMoves, heal: 5 });
 
@@ -224,10 +223,10 @@ class League extends Component {
   };
 
   newNpc = async (enemy) => {
-    const user = this.state.userHealed;
+    // const user = this.state.userHealed;
     const userPokemon = this.state.userPokemon;
     const userMoves = await getMoves(userPokemon.id);
-    this.setState({ user, userMoves });
+    this.setState({ userMoves });
     const npcContainer = enemy.shift();
     const npc = npcContainer.pokemon;
     const name = npcContainer.name;
@@ -398,7 +397,6 @@ class League extends Component {
   };
 
   battleSequence = async () => {
-    console.log(this.state.userHealed);
     this.setState({ battle: true });
     let typeUser = this.state.userPokemon.type;
     let typeNpc = this.state.npcPokemon.type;
@@ -473,22 +471,8 @@ class League extends Component {
         },
       });
     }
-    // if (npcHealth <= 0 && userHealth <= 0) {
-    //   setTimeout(
-    //     function() {
-    //       this.setState({
-    //         npcPokemon: { ...this.state.npcPokemon, current_health: 0 },
-    //         userPokemon: { ...this.state.userPokemon, current_health: 0 },
-    //         formData: { ...this.state.formData, current_health: userHealth }
-    //       });
-    //     }.bind(this),
-    //     2000
-    //   );
-    // }
+  
     if (npcHealth < 0 || npcHealth === 0) {
-      // const passData = {
-      //   current_health: 0,
-      // };
       this.setState({
         npcPokemon: { ...this.state.npcPokemon, current_health: 0 },
       });
@@ -508,15 +492,18 @@ class League extends Component {
               battle: false,
             });
 
-            // const resp = await update(id, passData);
           } else if (this.state.eliteFour.length === 0) {
             this.battleStart();
           } else {
+            const user = this.state.userHealed;
+            console.log("THIS IS USERHEALED!");
+            console.log(user);
             this.setState({
               userWin: true,
               npcPokemon: null,
               battle: false,
               isStart: false,
+              user,
             });
           }
         }.bind(this),
@@ -568,18 +555,6 @@ class League extends Component {
           2500
         );
       }
-      // setTimeout(
-      //   function () {
-      //     this.setState({
-      //       user,
-      //       userPokemon,
-      //       formData: { ...this.state.formData, current_health: 0 },
-      //       win: true,
-      //       battle: false,
-      //     });
-      //   }.bind(this),
-      //   2500
-      // );
     } else {
       const passData = {
         current_health: userHealth,
@@ -717,6 +692,8 @@ class League extends Component {
                     onClick={() => this.battleStart()}
                   >
                     PROCEED
+                    {console.log("THIS IS USERHEALED!!!")}
+                    {console.log(this.state.userHealed)}
                   </button>
                 </div>
                 <div>

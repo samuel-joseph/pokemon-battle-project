@@ -72,7 +72,6 @@ class Trainer extends Component {
     const total_experience = pokemon.total_experience;
     const id = pokemon.id;
     const type = pokemon.type;
-    console.log(pokemon);
 
     this.setState({
       isClicked: true,
@@ -94,7 +93,6 @@ class Trainer extends Component {
   };
 
   delete = async (index, move) => {
-    console.log(move);
     let id = this.props.pokemon.id;
     let moves = this.state.moves;
 

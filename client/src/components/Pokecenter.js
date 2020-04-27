@@ -27,7 +27,6 @@ class Pokecenter extends Component {
     this.props.saySomething("Heal your pokemons by pressing HEAL!");
     const user = await trainerPokemon();
     this.setState({ user });
-    console.log(user);
   };
 
   heal = async () => {
@@ -93,7 +92,6 @@ class Pokecenter extends Component {
     const pokemon = [];
     const resp = await getPokemon(id);
     pokemon.push(resp);
-    console.log(pokemon);
     this.setState({ pokemon });
   };
 

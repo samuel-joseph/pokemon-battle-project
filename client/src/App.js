@@ -44,7 +44,6 @@ class App extends Component {
 
   componentDidMount = async () => {
     verifyUser();
-    console.log(this.state.currentUser);
     if (localStorage.getItem("authToken")) {
       const username = localStorage.getItem("username");
       const user = { username };
@@ -57,26 +56,11 @@ class App extends Component {
     }
   };
 
-  // checkMoves = async id => {
-  //   id++;
-  //   const resp = await axios.get(`http://localhost:3001/pokemons/${id}/moves`);
-  //   const moves = resp.data.moves;
-  //   this.setState({ moves });
-  //   console.log(this.state.moves);
-  // };
 
   handleRegister = async (e, registerData) => {
     e.preventDefault();
-    console.log(registerData);
     const regData = await registerUser(registerData);
-    // const trainername = regData.username;
-    console.log(regData);
-    // const password = regData.password;
-    // const formData = this.state.regData;
-    // const id = this.state.id;
-    // this.reloadReg(trainername, password);
     const currentUser = regData;
-    console.log(currentUser);
     this.setState({
       currentUser,
       trainername: currentUser.username,
@@ -123,7 +107,6 @@ class App extends Component {
         <div>
           {!this.state.currentUser && (
             <div className="opening">
-              {/* <h2 className="title">POKEMON LEAGUE</h2> */}
               <div className="buttonsOpenning">
                 <Link className="register" to="/users/register">
                   REGISTER
